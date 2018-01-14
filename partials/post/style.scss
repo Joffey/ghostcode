@@ -1,0 +1,20 @@
+@import '~styles/var.scss';
+
+.post-content-wrap {
+  height: 100%;
+  overflow: auto;
+  .post {
+    padding: 0 30px;
+    .post-title {
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+    .meta {
+      margin: 0 0 30px;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}

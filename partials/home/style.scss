@@ -1,0 +1,26 @@
+@import '~styles/var.scss';
+
+.page-home {
+  height: 100%;
+  // .cover-image {
+  //   position: absolute;
+  //   left: $post-content-left;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   background-size: cover;
+  //   background-position: center center;
+  //   filter: grayscale(.8);
+  // }
+  .page-home-content {
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .recent-posts {
+      margin: 36px 0 0;
+      width: 100%;
+    }
+  }
+}

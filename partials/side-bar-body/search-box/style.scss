@@ -1,0 +1,41 @@
+@import "~styles/var.scss";
+
+.search-box {
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  header {
+    .clear-results {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: url(~icons/clear-all.svg) no-repeat 0 0;
+      background-size: 26px 26px;
+      cursor: pointer;
+    }
+  }
+  .search-form {
+    padding: 5px 15px;
+  }
+  .input-search {
+    width: 100%;
+    padding: 0 5px;
+    transition: border-color 0.3s;
+  }
+  .search-results {
+    overflow: auto;
+    .search-results-amount {
+      position: sticky;
+      top: 0;
+      padding: 0 15px;
+      z-index: 2;
+    }
+    .search-result-item {
+      display: block;
+      padding: 5px 15px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

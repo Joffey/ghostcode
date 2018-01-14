@@ -1,0 +1,18 @@
+@import "~styles/var.scss";
+
+.side-bar-body {
+  position: relative;
+  width: $side-bar-body-width;
+  &.visibility-hidden {
+    margin-left: -$side-bar-body-width;
+  }
+  header {
+    padding: 5px 15px;
+    .title {
+      text-transform: uppercase;
+    }
+    .extra {
+      text-align: right;
+    }
+  }
+}

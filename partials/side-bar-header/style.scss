@@ -1,0 +1,59 @@
+@import '~styles/var.scss';
+
+.side-bar-header {
+  position: relative;
+  width: $side-bar-header-width;
+  height: 100%;
+  overflow: auto;
+  z-index: 2;
+  .item {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
+  .theme-selector {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .skin {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .logo {
+    width: 46px;
+    height: 46px;
+    margin: 7px auto;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    &:hover {
+      animation: logo-breathing 1s infinite alternate;
+    }
+  }
+  .search {
+    background-image: url(~icons/search.svg);
+  }
+  .skin {
+    background-image: url(~icons/skin.svg);
+  }
+}
+
+@keyframes logo-breathing {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 6px #fff;
+  }
+}

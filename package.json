@@ -1,0 +1,40 @@
+{
+  "name": "coder",
+  "version": "1.0.0",
+  "description": "Another Ghost theme for coder",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -w --hide-modules",
+    "pretheme": "node tools/themeFormat.js",
+    "theme": "nodemon tools/theme.js -w src/styles/themes/common.scss -w tools/theme.js -w src/styles/themes/default.scss -w themes --ext scss,js"
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
+  "author": {
+    "name": "rangzf",
+    "email": "frontendme@163.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-dynamic-import-webpack": "^1.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "css-loader": "^0.28.8",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.10",
+    "sass-loader": "^6.0.6",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "ghosthunter": "git+https://github.com/jamalneufeld/ghostHunter.git",
+    "history": "^4.7.2",
+    "mitt": "^1.1.2"
+  }
+}

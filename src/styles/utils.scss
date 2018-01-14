@@ -1,0 +1,38 @@
+.single-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hidden {
+  display: none !important;
+}
+.flex {
+  display: flex;
+}
+.flex-middle {
+  align-items: center;
+}
+.flex-item {
+  flex: 1;
+}
+.flex-item0 {
+  flex: 0 0 auto;
+}
+.flex-col {
+  flex-direction: column;
+}
+.light {
+  opacity: 0.8;
+}
+.lighter {
+  opacity: 0.6;
+}
+.hover-opacity1 {
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+.blur {
+  filter: blur(0.5px);
+}

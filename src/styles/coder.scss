@@ -1,0 +1,48 @@
+html,
+body,
+.site-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  background: transparent;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+// override typo.css in color
+h1, h2, h3, h4, h5, h6, strong, b, .typo-em, .typo em, legend, caption {
+  color: #fff;
+}
+pre {
+  background: transparent;
+}
+mark {
+  strong {
+    color: #000;
+  }
+}
+
+input {
+  outline: none;
+}
+
+.site-wrapper {
+  padding: 0 0 $footer-height;
+}
+
+.side-bar-wrap {
+  float: left;
+  height: 100%;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.site-content {
+  height: 100%;
+  overflow: hidden;
+}

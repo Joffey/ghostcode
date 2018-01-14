@@ -1,0 +1,33 @@
+<main class="page-home flex">
+  <div class="cover-image {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}"></div>
+  <div class="page-home-content">
+    <section class="feature-posts">
+      <h2>Featured posts</h2>
+      {{#get "posts" filter="featured:true" limit="5" as |featured|}}
+        {{#if featured}}
+          <ol>
+            {{#foreach featured}}
+              <li>
+                <a href="{{url}}">{{title}}</a>
+              </li>
+            {{/foreach}}
+          </ol>
+        {{else}}
+          <div>No featured posts...</div>
+        {{/if}}
+      {{/get}}
+    </section>
+    <section class="recent-posts">
+      <h2>Recent posts</h2>
+      {{#get "posts" limit="5" as |recents|}}
+        <ol>
+          {{#foreach recents}}
+            <li>
+              <a href="{{url}}">{{title}}</a>
+            </li>
+          {{/foreach}}
+        </ol>
+      {{/get}}
+    </section>
+  </div>
+</main>

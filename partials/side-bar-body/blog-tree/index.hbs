@@ -1,0 +1,35 @@
+<section class="blog-tree blur" id="J-blog-tree">
+  <div class="loading"></div>
+  <header class="light">
+    <div class="title">blogs</div>
+  </header>
+  <div class="blog-tree-tags J-blog-tree-tags">
+    {{#get "tags" limit="all" }}
+      {{#foreach tags}}
+        <div class="blog-tree-tag">
+          <h4 class="blog-tree-tagname single-line J-blog-tree-tagname">{{name}}</h4>
+          <div class="blog-tree-posts J-blog-tree-posts" data-tag="{{name}}"></div>
+        </div>
+      {{/foreach}}
+    {{/get}}
+    <div class="untaged-posts J-untaged-posts"></div>
+  </div>
+  <div id="J-posts-all-hidden" class="hidden">
+    {{#get "posts" include="tags" fields="tags,title,id,slug" }}
+      {{#foreach posts}}
+        <div class="J-post blog-tree-post" data-slug="{{slug}}">
+          <ul>
+            <li>
+              <a href="/{{slug}}/" class="J-go2post single-line blog-tree-post-title" data-id="{{id}}" title="{{title}}">{{title}}</a>
+            </li>
+          </ul>
+          <div class="post-tags hidden">
+            {{#foreach tags}}
+              <span class="J-tag">{{name}}</span>
+            {{/foreach}}
+          </div>
+        </div>
+      {{/foreach}}
+    {{/get}}
+  </div>
+</section>

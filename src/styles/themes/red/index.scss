@@ -1,0 +1,187 @@
+.theme-red {
+$editor-foreground: #fff;
+$sideBar-background: transparent;
+$list-hoverBackground: #303334;
+$tab-inactiveBackground: #333;
+$tab-activeBackground: #1E1E1E;
+$sideBar-background: #2a2a2b;
+$debugToolBar-background: #3a3a3a;
+$list-activeSelectionBackground: #05507c;
+$statusBar-background: #0285d2;
+$statusBar-foreground: #fff;
+$tab-border: #2a2a2b;
+$input-border: transparent;
+$inputOption-activeBorder: #245d81;
+$input-foreground: #fff;
+$input-background: #444;
+$editorGroupHeader-tabsBackground: #333;
+$input-placeholderForeground: #fff;
+$sideBar-foreground: #fff;
+$badge-foreground: #fff;
+$scrollbarSlider-background: #646464;
+$scrollbarSlider-hoverBackground: #5b5b5b;
+$textLink-foreground: #4080D0;
+
+  $activityBar-background: #580000;
+  $tab-inactiveBackground: #300a0a;
+  $tab-activeBackground: #490000;
+  $sideBar-background: #330000;
+  $statusBar-background: #700000;
+  $statusBar-noFolderBackground: #700000;
+  $editorGroupHeader-tabsBackground: #330000;
+  $titleBar-activeBackground: #770000;
+  $titleBar-inactiveBackground: #772222;
+  $selection-background: #ff777788;
+  $editor-background: #390000;
+  $editorGroup-border: #ff666633;
+  $editorGroup-background: #1c0101;
+  $editorCursor-foreground: #970000;
+  $editor-foreground: #F8F8F8;
+  $editorWhitespace-foreground: #c10000;
+  $editor-selectionBackground: #750000;
+  $editorLineNumber-foreground: #ff777788;
+  $editorWidget-background: #300000;
+  $editorHoverWidget-background: #300000;
+  $editorSuggestWidget-background: #300000;
+  $editorSuggestWidget-border: #220000;
+  $editor-lineHighlightBackground: #ff000033;
+  $editor-hoverHighlightBackground: #ff000044;
+  $editor-selectionHighlightBackground: #f5500039;
+  $editorLink-activeForeground: #FFD0AA;
+  $peekViewTitle-background: #550000;
+  $peekView-border: #ff000044;
+  $peekViewResult-background: #400000;
+  $peekViewEditor-background: #300000;
+  $debugToolBar-background: #660000;
+  $focusBorder: #ff6666aa;
+  $button-background: #833;
+  $dropdown-background: #580000;
+  $input-background: #580000;
+  $inputOption-activeBorder: #cc0000;
+  $inputValidation-infoBackground: #550000;
+  $inputValidation-infoBorder: #DB7E58;
+  $list-hoverBackground: #800000;
+  $list-activeSelectionBackground: #880000;
+  $list-inactiveSelectionBackground: #770000;
+  $list-dropBackground: #662222;
+  $list-focusBackground: #660000;
+  $list-highlightForeground: #ff4444;
+  $notification-background: #662222;
+  $pickerGroup-foreground: #cc9999;
+  $pickerGroup-border: #ff000033;
+  $badge-background: #cc3333;
+  $progressBar-background: #cc3333;
+  $errorForeground: #ffeaea;
+  $extensionButton-prominentBackground: #cc3333;
+  $extensionButton-prominentHoverBackground: #cc333388;
+
+a,
+a:active {
+  color: $editor-foreground;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: $scrollbarSlider-background;
+  &:hover {
+    background: $scrollbarSlider-hoverBackground;
+  }
+}
+
+.site-wrapper {
+  color: $editor-foreground;
+  background: $editor-background;
+}
+
+.side-bar-header {
+  background: $debugToolBar-background;
+}
+
+.side-bar-body {
+  background: $sideBar-background;
+}
+.blog-tree {
+  .blog-tree-tagname,
+  .blog-tree-post {
+    &.active {
+      background: $list-activeSelectionBackground;
+    }
+    &:hover:not(.active) {
+      background: $list-hoverBackground;
+    }
+  }
+}
+
+.search-box {
+  background: $sideBar-background;
+  .input-search {
+    color: $input-foreground;
+    border: 1px solid $input-border;
+    background: $input-background;
+    &:focus {
+      border-color: $inputOption-activeBorder;
+    }
+    &::placeholder {
+      color: $input-placeholderForeground;
+    }
+  }
+  .search-results-amount {
+    color: $badge-foreground;
+    background: $sideBar-background;
+    b {
+      color: $badge-foreground;
+    }
+  }
+  .search-result-item {
+    color: $sideBar-foreground;
+    &:hover {
+      background: $list-hoverBackground;
+    }
+    &.active {
+      background: $list-activeSelectionBackground;
+    }
+  }
+}
+
+.post-tab {
+  .home-entry {
+    box-shadow: 3px 6px 6px $editor-background;
+    background-color: $editorGroupHeader-tabsBackground;
+  }
+  .fixed {
+    // box-shadow: 0 0 2px $tab-border;
+  }
+  .item {
+    border-right: 1px solid $tab-border;
+    background: $tab-inactiveBackground;
+  }
+  .active {
+    background: $editor-background;
+  }
+  .scroller {
+    background-color: $editorGroupHeader-tabsBackground;
+  }
+}
+
+.footer {
+  box-shadow: 0 -1px 2px darken($statusBar-background, 10%);
+  color: $statusBar-foreground;
+  background: $statusBar-background;
+}
+
+.post {
+  background: $editor-background;
+}
+
+.page-home {
+  a {
+    color: $textLink-foreground;
+  }
+}
+
+}

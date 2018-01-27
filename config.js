@@ -2,8 +2,9 @@ import { themes } from './themes/result.json'
 
 export default {
   themes,
-  lsPostTabKey: 'post-tabs',
+  lsPostTabKey: 'coder-post-tabs',
   // localstorage theme key
-  lsThemeKey: 'theme',
+  lsThemeKey: 'coder-theme',
+  lsPostsKey: 'coder-posts',
   defaultTheme: 'dark_default'
 }

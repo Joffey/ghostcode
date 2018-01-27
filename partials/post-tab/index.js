@@ -5,7 +5,6 @@ import history from '#/history'
 import { hScroll, isPostPage } from '#/utils'
 
 $(function() {
-
   if (!isPostPage()) return
 
   let $postTabs = $('#J-post-tab')
@@ -28,22 +27,26 @@ $(function() {
   emitter.on('tab-refresh', (active = {}) => {
     const activeId = active.id
     const tabs = tabStore.getTabs()
+    const currentTab = tabStore.currentTab
 
     const $active = $('#J-post-tab')
       .html(
         tabs
           .map(
             tab =>
-              `<div title="${tab.title}" class="J-tab-item light hover-opacity1 flex-item0 single-line item ${
-                activeId === tab.id ? 'active' : ''
-              }" data-id="${tab.id}">${tab.title}<i class="close J-post-tab-close lighter hover-opacity1" data-slug="${tab.slug}"></i></div>`
+              `<div title="${tab.title}" class="J-tab-item light hover-opacity1 flex-item0 single-line item ${activeId === tab.id ? 'active' : ''}" data-id="${
+                tab.id
+              }">${tab.title}<i class="close J-post-tab-close lighter hover-opacity1" data-slug="${tab.slug}"></i></div>`
           )
           .join('')
       )
       .find('.active')
 
-    history.push(active.url, { ...active })
-    tabStore.setCurrentTab({ ...active })
+    // not refetch current post
+    if (!currentTab || currentTab.id !== activeId) {
+      history.push(active.url, { ...active })
+      tabStore.setCurrentTab({ ...active })
+    }
 
     scroll2view($active)
   })

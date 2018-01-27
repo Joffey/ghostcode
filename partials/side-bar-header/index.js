@@ -16,8 +16,8 @@ $(document).ready(function() {
     .html(
       themes
         .map(theme => {
-          const isSelected = themeStore.theme === 'theme-' + theme ? 'selected' : ''
-          return `<option value="theme-${theme}" ${isSelected}>theme-${theme}</option>`
+          const isSelected = themeStore.theme === theme ? 'selected' : ''
+          return `<option value="${theme}" ${isSelected}>${theme}</option>`
         })
         .join('')
     )
@@ -26,12 +26,12 @@ $(document).ready(function() {
       const theme = $this.val()
 
       if (theme !== themeStore.theme) {
-        $body.addClass(theme).removeClass(themeStore.theme)
+        $body.addClass('theme-' + theme).removeClass('theme-' + themeStore.theme)
         themeStore.setTheme(theme)
       }
     })
 
-  $body.addClass(themeStore.theme)
+  $body.addClass('theme-' + themeStore.theme)
 
   $sidebar
     .on('click', '.J-sidebar-logo', function() {
@@ -70,11 +70,11 @@ $(document).ready(function() {
     })
 
   function sidebarBodyShow() {
-    $sidebarBody.removeClass('visibility-hidden')
+    $sidebarBody.removeClass('hidden')
     isSideBodyShowing = true
   }
   function sidebarBodyHide() {
-    $sidebarBody.addClass('visibility-hidden')
+    $sidebarBody.addClass('hidden')
     isSideBodyShowing = false
   }
 })

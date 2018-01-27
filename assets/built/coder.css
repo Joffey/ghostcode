@@ -865,8 +865,6 @@ input {
 .side-bar-body {
   position: relative;
   width: 300px; }
-  .side-bar-body.visibility-hidden {
-    margin-left: -300px; }
   .side-bar-body header {
     padding: 5px 15px; }
     .side-bar-body header .title {
@@ -892,9 +890,20 @@ input {
     .post-content-wrap .post .post-title {
       font-weight: 700;
       margin-bottom: 0; }
-    .post-content-wrap .post .meta {
+    .post-content-wrap .post .post-meta {
       margin: 0 0 30px;
       font-style: italic; }
+    .post-content-wrap .post .post-feature-image {
+      position: relative;
+      height: 366px;
+      margin: 0 -30px; }
+      .post-content-wrap .post .post-feature-image figure {
+        position: relative;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 1; }
     .post-content-wrap .post img {
       max-width: 100%; }
 .page-home {

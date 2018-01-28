@@ -7,9 +7,7 @@
         {{#if featured}}
           <ol>
             {{#foreach featured}}
-              <li>
-                <a href="{{url}}">{{title}}</a>
-              </li>
+              {{> 'post-card/index'}}
             {{/foreach}}
           </ol>
         {{else}}
@@ -22,9 +20,7 @@
       {{#get "posts" limit="5" as |recents|}}
         <ol>
           {{#foreach recents}}
-            <li>
-              <a href="{{url}}">{{title}}</a>
-            </li>
+            {{> 'post-card/index'}}
           {{/foreach}}
         </ol>
       {{/get}}

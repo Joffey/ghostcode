@@ -34,8 +34,8 @@ $(function() {
 
         $title.html(title)
         $content.html(html)
-        $meta.html(`Posted by ${author.name} on ${formatDate('$Y.$M.$d', created_at)}`)
-        $featureImage[feature_image ? 'show' : 'hide']().find('figure').css({
+        $meta.html(`Posted by <a href="/author/${author.slug}/">${author.name}</a> on ${formatDate('$Y.$M.$d', created_at)}`)
+        $featureImage[feature_image ? 'removeClass' : 'addClass']('hidden').find('figure').css({
           backgroundImage: `url(${feature_image})`
         })
         emitter.emit('refresh-reading-time', {

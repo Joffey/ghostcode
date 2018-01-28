@@ -25,6 +25,16 @@
     opacity: 0;
     cursor: pointer;
   }
+  .search {
+    background-image: url(~icons/search.svg);
+  }
+  .skin {
+    background-image: url(~icons/skin.svg);
+  }
+  .home {
+    background-image: url(~icons/home.svg);
+    background-size: 32px 32px;
+  }
   .skin {
     position: absolute;
     left: 0;
@@ -41,12 +51,6 @@
       animation: logo-breathing 1s infinite alternate;
     }
   }
-  .search {
-    background-image: url(~icons/search.svg);
-  }
-  .skin {
-    background-image: url(~icons/skin.svg);
-  }
 }
 
 @keyframes logo-breathing {
@@ -54,6 +58,6 @@
     box-shadow: none;
   }
   100% {
-    box-shadow: 0 0 6px #fff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .2);
   }
 }

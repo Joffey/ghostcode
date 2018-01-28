@@ -1,0 +1,39 @@
+.author-wrap {
+  height: 100%;
+  padding: 30px;
+  overflow: auto;
+  header {
+    text-align: center;
+    &:not(.no-cover) {
+      height: 366px;
+      margin: -30px -30px 30px;
+      padding: 100px 0 0;
+      background-size: cover;
+    }
+  }
+
+  .author-bio {
+    font-size: 1.6rem;
+  }
+  .author-avatar {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+  }
+  .author-meta {
+    a {
+      display: inline-block;
+      margin: 0 5px;
+    }
+    svg {
+      height: 1.6rem;
+      fill: #fff;
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+}

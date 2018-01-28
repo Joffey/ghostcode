@@ -1,29 +1,13 @@
 @import '~styles/var.scss';
 
 .post-tab {
-  $home-width: 46px;
   position: relative;
-  padding: 0 0 0 $home-width;
   height: $post-tab-height;
   line-height: $post-tab-height;
   cursor: pointer;
   .container {
     width: 100%;
     overflow: auto;
-  }
-  .home-entry {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: $home-width;
-    height: $post-tab-height;
-    z-index: 8;
-    a {
-      display: block;
-      height: 100%;
-      background: url(~icons/home.svg) no-repeat center center;
-      background-size: 32px 32px;
-    }
   }
   .item {
     position: relative;

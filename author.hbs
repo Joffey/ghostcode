@@ -1,0 +1,9 @@
+{{!< default}}
+<div class="author-wrap">
+  {{> 'author/index'}}
+  <ul>
+    {{#foreach posts}}
+      {{> 'post-card/index'}}
+    {{/foreach}}
+  </ul>
+</div>

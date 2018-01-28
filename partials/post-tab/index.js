@@ -10,8 +10,6 @@ $(function() {
   let $postTabs = $('#J-post-tab')
   const $scrollWrap = $('.J-post-tab-scroller-wrap')
   const ndScrollWrap = $scrollWrap.get(0)
-  const $home = $('.J-home-entry')
-  const homeWidth = $home.outerWidth()
 
   emitter.on('add-post-tab', post => {
     const tabs = tabStore.getTabs()
@@ -93,10 +91,10 @@ $(function() {
     const activeLeft = ndActive.offsetLeft
     const activeRight = activeLeft + activeWidth
     if (activeRight > wrapWidth + wrapScrollLeft) {
-      ndScrollWrap.scrollLeft = activeRight - wrapWidth - homeWidth - threshold
+      ndScrollWrap.scrollLeft = activeRight - wrapWidth - threshold
     }
     if (activeLeft <= wrapScrollLeft) {
-      ndScrollWrap.scrollLeft = activeLeft - homeWidth - threshold
+      ndScrollWrap.scrollLeft = activeLeft - threshold
     }
   }
 

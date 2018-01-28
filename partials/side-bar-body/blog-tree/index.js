@@ -68,7 +68,7 @@ $(document).ready(function() {
     .on('click', '.J-go2post', function(e) {
       const $this = $(this)
 
-      if ($body.is('.home-template')) return
+      if (!$body.is('.post-template')) return
 
       if ($this.parents('.J-post').is('.active')) {
         e.preventDefault()

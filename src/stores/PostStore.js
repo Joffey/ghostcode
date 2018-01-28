@@ -56,16 +56,12 @@ export default class {
   cachePost(id, post) {
     if (post.fromCache) return
 
-    const { created_at, title, html, author, feature_image } = post
     let lsPosts = ls.getItem(lsPostsKey)
     lsPosts = lsPosts ? JSON.parse(lsPosts) : {}
 
     lsPosts[id] = {
-      created_at,
-      title,
-      html,
-      author: JSON.stringify(author),
-      feature_image,
+      ...post,
+      author: JSON.stringify(post.author),
       timestamp: +new Date()
     }
 

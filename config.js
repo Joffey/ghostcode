@@ -6,5 +6,5 @@ export default {
   // localstorage theme key
   lsThemeKey: 'coder-theme',
   lsPostsKey: 'coder-posts',
-  defaultTheme: 'dark_default'
+  defaultTheme: 'dark_default',
 }

@@ -16,8 +16,34 @@ export default class {
           })
           .done(data => {
             const post = data.posts[0] || {}
+            console.log(post)
             this.cachePost(id, post)
+            return post
           })
+  }
+
+  fetchPrevNextPost({ slug, published_at, type }) {
+    if (['prev', 'next', 'both'].indexOf(type) === -1) return
+    const map = {
+      prev: {
+        sort: 'desc',
+        published_at: '<='
+      },
+      next: {
+        sort: 'asc',
+        published_at: '>='
+      }
+    }
+    return type !== 'both' ? fetch(type) : $.when(fetch('prev'), fetch('next'))
+
+    function fetch(type) {
+      return $.get(ghost.url.api('posts'), {
+        filter: `slug:-[${slug}]+published_at:${map[type].published_at}${+new Date(published_at)}`,
+        order: `published_at ${map[type].sort}`,
+        limit: 1,
+        fields: 'title,id,slug,url'
+      })
+    }
   }
 
   /**

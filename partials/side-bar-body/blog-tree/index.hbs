@@ -4,7 +4,7 @@
     <div class="title">blogs</div>
   </header>
   <div class="blog-tree-tags J-blog-tree-tags">
-    {{#get "tags" limit="all" }}
+    {{#get "tags" limit="all" order="id desc"}}
       {{#foreach tags}}
         <div class="blog-tree-tag">
           <h4 class="blog-tree-tagname single-line J-blog-tree-tagname">{{name}}</h4>
@@ -15,7 +15,7 @@
     <div class="untaged-posts J-untaged-posts"></div>
   </div>
   <div id="J-posts-all-hidden" class="hidden">
-    {{#get "posts" include="tags" fields="tags,title,id,slug" }}
+    {{#get "posts" include="tags" fields="tags,title,id,slug" order="published_at asc" }}
       {{#foreach posts}}
         <div class="J-post blog-tree-post" data-slug="{{slug}}">
           <ul>

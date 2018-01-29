@@ -9,6 +9,18 @@
       <div class="post-content post-full-content J-post-content">{{{html}}}</div>
       <div class="hidden J-reading-time-hidden">{{reading_time}}</div>
     </article>
+    <section class="post-prev-next" id="J-prev-next">
+      <span class="post-prev J-prev-post">
+        {{#prev_post}}
+          <a href="{{url}}" class="J-prev-next-item" title="{{title}}" data-id="{{id}}" data-slug="{{slug}}">{{title}}</a>
+        {{/prev_post}}
+      </span>
+      <span class="post-next J-next-post">
+        {{#next_post}}
+          <a href="{{url}}" class="J-prev-next-item" title="{{title}}" data-id="{{id}}" data-slug="{{slug}}">{{title}}</a>
+        {{/next_post}}
+      </span>
+    </section>
     {{!-- disqus start: remove it if you dont need ↓ --}}
     <div id="disqus_thread"></div>
     <script>
@@ -30,8 +42,8 @@
         })();
 
         window.refreshComment = function (newIdentifier, newUrl, newTitle) {
-          DISQUS &&
-            DISQUS.reset({
+          window.DISQUS &&
+            window.DISQUS.reset({
               reload: true,
               config: function () {
                 this.page.identifier = newIdentifier
@@ -46,6 +58,5 @@
       <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
     </noscript>
     {{!-- disqus end: remove it if you dont need ↑ --}}
-
   {{/post}}
 </div>

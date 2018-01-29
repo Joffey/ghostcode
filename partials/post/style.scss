@@ -30,6 +30,40 @@
       max-width: 100%;
     }
   }
+  .post-prev-next {
+    margin: 15px 30px;
+    overflow: hidden;
+    span {
+      position: relative;
+      width: 50%;
+      height: 100%;
+    }
+    .post-prev a:before,
+    .post-next a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 16px;
+      height: 16px;
+      background: url(~icons/arrow.svg) no-repeat 0 center;
+      background-size: 16px 16px;
+    }
+    .post-prev {
+      float: left;
+      padding: 0 0 0 20px;
+    }
+    .post-next {
+      float: right;
+      text-align: right;
+      padding: 0 20px 0 0;
+      a:after {
+        left: auto;
+        right: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
   #disqus_thread {
     margin: 30px;
   }

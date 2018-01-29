@@ -1,11 +1,13 @@
 # vscode-ghost-theme
 
-This is a `vscode-like` Ghost theme(it's still under development)
+This is a `vscode-like` Ghost theme (It's still under development)
 
 ## Screenshots
 <div align="center">
 	<div>Home</div>
 	<img src="./example/Home.png" />
+	<div>Change to vscode theme 'abyss'</div>
+	<img src="./example/Change-theme.png" />
 	<div>Post</div>
 	<img src="./example/Post.png" />
 	<div>Author</div>

@@ -1,23 +1,36 @@
-# coder
+# vscode-ghost-theme
 
-Another Ghost theme for coders
+This is a `vscode-like` Ghost theme(it's still under development)
 
-## Install
+## Screenshots
+<div align="center">
+	<div>Home</div>
+	<img src="./example/Home.png" />
+	<div>Post</div>
+	<img src="./example/Post.png" />
+	<div>Author</div>
+	<img src="./example/Author.png" />
+	<div>Search</div>
+	<img src="./example/Search.png" />
+</div>
 
-```
-npm run dev
-npm run theme
-```
+## Dev Progress
 
-## Usage
+### P0
+- [x] Home page
+- [x] Post Page
+- [x] Author Page or About Me page
+- [x] Comment System: DISQUS
+- [x] Prev / Next post
+- [x] Change theme(Support official `vscode` theme)
+- [x] Search all posts
+- [ ] Responsive
 
-- disqus configuration: coder/partials/post/index.hbs around L12 - L48
-- theme configuration: put your fav theme into coder/themes & npm run theme
+### P1
+- [x] Post Cache
+- [ ] Social sharing
+- [ ] Reading progress
+- [ ] Post Navigation
+- [ ] Build in Production mode
+- [ ] Compatibility testing
 
-## Stack
-
-* [Search](https://github.com/jamalneufeld/ghostHunter)
-
-## Reference
-
-[vscode theme color reference](https://code.visualstudio.com/docs/getstarted/theme-color-reference)

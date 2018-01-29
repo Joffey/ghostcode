@@ -1,7 +1,7 @@
 {
-  "name": "coder",
+  "name": "vscode-ghost-theme",
   "version": "1.0.0",
-  "description": "Another Ghost theme for coder",
+  "description": "vscode-like ghost theme",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -w --hide-modules",

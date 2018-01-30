@@ -1,6 +1,6 @@
 {
-  "name": "vscode-ghost-theme",
-  "version": "1.0.0",
+  "name": "ghostcode",
+  "version": "0.1.0",
   "description": "vscode-like ghost theme",
   "main": "index.js",
   "scripts": {

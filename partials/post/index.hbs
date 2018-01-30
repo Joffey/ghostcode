@@ -1,4 +1,4 @@
-<div class="post-content-wrap typo flex-item">
+<div class="post-content-wrap typo flex-item" id="J-post-wrap">
   {{#post}}
     <article id="J-post" class="post" data-id="{{id}}" data-title="{{title}}" data-slug="{{slug}}" data-url="{{url}}">
       <div class="post-feature-image loading J-post-feature-image {{#if feature_image}}{{else}}hidden{{/if}}">
@@ -9,18 +9,8 @@
       <div class="post-content post-full-content J-post-content">{{{html}}}</div>
       <div class="hidden J-reading-time-hidden">{{reading_time}}</div>
     </article>
-    <section class="post-prev-next" id="J-prev-next">
-      <span class="post-prev J-prev-post">
-        {{#prev_post}}
-          <a href="{{url}}" class="J-prev-next-item" title="{{title}}" data-id="{{id}}" data-slug="{{slug}}">{{title}}</a>
-        {{/prev_post}}
-      </span>
-      <span class="post-next J-next-post">
-        {{#next_post}}
-          <a href="{{url}}" class="J-prev-next-item" title="{{title}}" data-id="{{id}}" data-slug="{{slug}}">{{title}}</a>
-        {{/next_post}}
-      </span>
-    </section>
+    {{!-- prev next post start --}}
+    {{!-- prev next post end --}}
     {{!-- disqus start: remove it if you dont need ↓ --}}
     {{!-- disqus end: remove it if you dont need ↑ --}}
   {{/post}}

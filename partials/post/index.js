@@ -79,8 +79,6 @@ $(function() {
           const prevPost = prev[0].posts[0]
           const nextPost = next[0].posts[0]
 
-          console.log(published_at, prevPost, nextPost)
-
           prevPost
             ? $prev
                 .show()

@@ -1,4 +1,5 @@
 import config from 'config'
+import { tabStore } from '#/stores'
 const ls = localStorage
 const lsPostsKey = config.lsPostsKey
 
@@ -11,8 +12,11 @@ export default class {
       : $.get(ghost.url.api(`posts/${id}`), {
           include: 'author'
         })
-          .fail(function(err) {
+          .fail(err => {
             console.log(err)
+            if (err.status === 404) {
+              tabStore.deleteTabItem(id)
+            }
           })
           .done(data => {
             const post = data.posts[0] || {}

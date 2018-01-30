@@ -2,6 +2,7 @@ import config from 'config'
 import { tabStore } from '#/stores'
 const ls = localStorage
 const lsPostsKey = config.lsPostsKey
+const lsPostsExpiration = config.lsPostsExpiration
 
 export default class {
   fetchPost(id) {
@@ -60,7 +61,7 @@ export default class {
     lsPosts = lsPosts ? JSON.parse(lsPosts) : {}
 
     const post = lsPosts[id]
-    const useable = post && +new Date() - post.timestamp <= 5 * 60 * 1000
+    const useable = post && +new Date() - post.timestamp <= lsPostsExpiration
 
     if (useable) {
       console.info('[Post readed from cache]:', post.title)

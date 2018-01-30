@@ -4,7 +4,7 @@
   "description": "vscode-like ghost theme",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -w --hide-modules",
+    "dev": "rimraf assets/built && webpack -w --hide-modules",
     "pretheme": "node tools/themeFormat.js",
     "theme": "nodemon tools/theme.js -w src/styles/themes/common.scss -w tools/theme.js -w src/styles/themes/default.scss -w themes --ext scss,js"
   },

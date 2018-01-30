@@ -22,41 +22,7 @@
       </span>
     </section>
     {{!-- disqus start: remove it if you dont need ↓ --}}
-    <div id="disqus_thread"></div>
-    <script>
-      /* * * !!! REPLACE THIS `disqus_shortname` TO YOUR OWN SITE !!! * * */
-      var disqus_shortname = 'wuliwa-la';
-
-      if (disqus_shortname) {
-        var disqus_identifier = 'ghost-{{comment_id}}';
-        var disqus_url = '{{url absolute="true"}}';
-        var disqus_config = function () {
-          this.language = "en";
-        };
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-
-        window.refreshComment = function (newIdentifier, newUrl, newTitle) {
-          window.DISQUS &&
-            window.DISQUS.reset({
-              reload: true,
-              config: function () {
-                this.page.identifier = newIdentifier
-                this.page.url = newUrl
-                this.page.title = newTitle
-              }
-            })
-        }
-      }
-    </script>
-    <noscript>Please enable JavaScript to view the
-      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
     {{!-- disqus end: remove it if you dont need ↑ --}}
   {{/post}}
 </div>
+<script src="{{asset "highlightjs/index.js"}}"></script>

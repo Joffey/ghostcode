@@ -15,6 +15,8 @@ $(function() {
   const $featureImage = $post.find('.J-post-feature-image')
   const origin = location.origin
 
+  highlight()
+
   if ($('body').is('.post-template')) {
     emitter.emit('add-post-tab', {
       id: $post.data('id'),
@@ -93,6 +95,14 @@ $(function() {
         })
 
       'function' === typeof window.refreshComment && window.refreshComment(`ghost-${comment_id}`, origin + url, title)
+
+      highlight()
     })
   })
+
+  function highlight() {
+    $('pre code').each(function(i, block) {
+      window.hljs && window.hljs.highlightBlock(block)
+    })
+  }
 })

@@ -22,7 +22,7 @@ This is a `vscode-like` Ghost theme (It's still under development)
 - [x] Home page
 - [x] Post Page
 - [x] Author Page or About Me page
-- [x] Comment System: DISQUS
+- [ ] Comment System: DISQUS (removed temporarily due to long loading time)
 - [x] Prev / Next post
 - [x] Change theme(Support official `vscode` theme)
 - [x] Search all posts

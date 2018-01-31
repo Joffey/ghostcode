@@ -7,6 +7,7 @@ $(document).ready(function() {
   const pathname = location.pathname
   const $body = $('body')
   const $untagedPosts = $tagTree.find('.J-untaged-posts')
+  const $win = $(window)
 
   const tags = {}
   const untaged = []
@@ -77,6 +78,10 @@ $(document).ready(function() {
 
       const id = $this.data('id')
       const url = $this.attr('href')
+
+      if ($win.width() < 450) {
+        emitter.emit('sidebar-hidden')
+      }
 
       e.preventDefault()
       emitter.emit('add-post-tab', {

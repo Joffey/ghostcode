@@ -27,7 +27,7 @@ This is a `vscode-like` Ghost theme (It's still under development)
 - [x] ~~Prev / Next post~~(removed to simplify the theme, nav through sidebar is super easy)
 - [x] Change theme(Support official `vscode` theme)
 - [x] Search all posts
-- [ ] Responsive
+- [x] Responsive(v1, need to optimize)
 
 ### P1
 - [x] Post Cache

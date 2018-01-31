@@ -1,4 +1,5 @@
 const $body = $('body')
+const $win = $(window)
 
 export const isHomePage = () => $body.is('.home-template')
 export const isPostPage = () => $body.is('.post-template')
@@ -64,4 +65,15 @@ export const formatDate = function(template, date) {
     m: toLen(date.getMinutes(), 2),
     s: toLen(date.getSeconds(), 2)
   })
+}
+
+export function onresize(callback) {
+  const fn = function(e) {
+    const width = $win.width()
+    return callback.call(this, e, width)
+  }
+
+  fn()
+  window.addEventListener('resize', fn)
+  return () => window.removeEventListener('resize', fn)
 }

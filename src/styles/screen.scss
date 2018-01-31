@@ -1,0 +1,79 @@
+@import './var.scss';
+
+@media (min-width: 1180px) {
+}
+@media (min-width: 1040px) {
+}
+@media (min-width: 900px) {
+}
+@media (max-width: 800px) {
+  .side-bar-wrap {
+    position: relative;
+    z-index: 2;
+    .side-bar-body {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 0 0 0 $side-bar-header-width;
+      bottom: $footer-height;
+      display: none;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 795px) {
+}
+
+@media (max-width: 700px) {
+  .site-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .side-bar-wrap {
+    position: relative;
+    display: block;
+    float: none;
+    height: $side-bar-header-width;
+    overflow: visible;
+    z-index: 2;
+    .side-bar-header {
+      width: 100%;
+      height: $side-bar-header-width;
+      padding: 0 15px;
+      overflow: hidden;
+      .item {
+        display: inline-block;
+      }
+      .home,
+      .search {
+        float: right;
+      }
+    }
+    .side-bar-body {
+      position: fixed;
+      left: 0;
+      top: $side-bar-header-width;
+      width: 100%;
+      padding: 0;
+      bottom: $footer-height;
+      flex: none;
+      overflow: auto;
+      z-index: 8;
+    }
+  }
+  .post-tab {
+    display: none;
+  }
+  .footer {
+    position: static;
+  }
+}
+@media (max-width: 650px) {
+}
+
+@media (max-width: 500px) {
+}
+@media (max-width: 450px) {
+}

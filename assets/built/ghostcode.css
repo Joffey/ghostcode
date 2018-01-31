@@ -571,6 +571,63 @@ Style with support for rainbow parens
 
 .hljs-emphasis {
   font-style: italic; }
+
+@media (max-width: 800px) {
+  .side-bar-wrap {
+    position: relative;
+    z-index: 2; }
+    .side-bar-wrap .side-bar-body {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 0 0 0 60px;
+      bottom: 30px;
+      display: none;
+      z-index: 1; } }
+
+@media (max-width: 700px) {
+  .site-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .side-bar-wrap {
+    position: relative;
+    display: block;
+    float: none;
+    height: 60px;
+    overflow: visible;
+    z-index: 2; }
+    .side-bar-wrap .side-bar-header {
+      width: 100%;
+      height: 60px;
+      padding: 0 15px;
+      overflow: hidden; }
+      .side-bar-wrap .side-bar-header .item {
+        display: inline-block; }
+      .side-bar-wrap .side-bar-header .home,
+      .side-bar-wrap .side-bar-header .search {
+        float: right; }
+    .side-bar-wrap .side-bar-body {
+      position: fixed;
+      left: 0;
+      top: 60px;
+      width: 100%;
+      padding: 0;
+      bottom: 30px;
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none;
+      overflow: auto;
+      z-index: 8; }
+  .post-tab {
+    display: none; }
+  .footer {
+    position: static; } }
 .post-tab {
   position: relative;
   height: 40px;
@@ -609,6 +666,7 @@ Style with support for rainbow parens
   z-index: 2; }
   .side-bar-header .item {
     display: block;
+    width: 60px;
     height: 60px;
     line-height: 60px;
     background-size: 30px 30px;
@@ -750,7 +808,6 @@ Style with support for rainbow parens
   .blog-tree .untaged-posts a {
     padding-left: 18px; }
 .side-bar-body {
-  position: relative;
   width: 300px; }
   .side-bar-body header {
     padding: 5px 15px; }

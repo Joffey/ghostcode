@@ -1,10 +1,12 @@
 import './style.scss'
 import { theme } from 'config'
+import { onresize } from '#/utils'
 
 $(document).ready(function() {
   const $sidebar = $('#J-sidebar-header')
   const $body = $('body')
   const $sidebarBody = $('#J-side-bar-body')
+  const $sidebarItem = $sidebar.find('.J-sidebar-item')
   let isSearchShowing = false
   let isSideBodyShowing = true
 
@@ -31,7 +33,6 @@ $(document).ready(function() {
 
       if ($this.is('.active')) {
         sidebarBodyHide()
-        $this.removeClass('active')
       } else {
         sidebarBodyShow()
 
@@ -47,11 +48,25 @@ $(document).ready(function() {
     })
 
   function sidebarBodyShow() {
-    $sidebarBody.removeClass('hidden')
+    $sidebarBody.removeClass('hidden').show()
     isSideBodyShowing = true
   }
   function sidebarBodyHide() {
-    $sidebarBody.addClass('hidden')
+    $sidebarBody.addClass('hidden').hide()
     isSideBodyShowing = false
+    $sidebarItem.removeClass('active')
   }
+
+  emitter.on('sidebar-hidden', function () {
+    sidebarBodyHide()
+  })
+
+  onresize(function(e, width) {
+    if (width < 800) {
+      sidebarBodyHide()
+    }
+    if(width >= 800) {
+      sidebarBodyShow()
+    }
+  })
 })

@@ -1,18 +1,14 @@
-import { themes } from './themes/result.json'
-
-export default {
-  // all themes
-  themes,
+module.exports = {
   // localstorage tab key
-  lsPostTabKey: 'coder-post-tabs',
+  lsPostTabKey: 'ghostcode-post-tabs',
   // tab expiration 1d
   lsPostTabExpiration: 24 * 60 * 60 * 1000,
   // localstorage theme key
-  lsThemeKey: 'coder-theme',
+  lsThemeKey: 'ghostcode-theme',
   // localstorage post key
-  lsPostsKey: 'coder-posts',
+  lsPostsKey: 'ghostcode-posts',
   // post expiration time 1min
   lsPostsExpiration: 1 * 60 * 1000,
-  // default theme
-  defaultTheme: 'dark_default',
+  // theme name from ./themes/result.json
+  theme: 'dark_default',
 }

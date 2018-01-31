@@ -1,37 +1,14 @@
 import './style.scss'
-import config from 'config'
-import { themeStore } from '#/stores'
-
-const themes = config.themes
+import { theme } from 'config'
 
 $(document).ready(function() {
   const $sidebar = $('#J-sidebar-header')
   const $body = $('body')
-  const $themeSelector = $('#J-theme-selector')
   const $sidebarBody = $('#J-side-bar-body')
   let isSearchShowing = false
   let isSideBodyShowing = true
 
-  $themeSelector
-    .html(
-      themes
-        .map(theme => {
-          const isSelected = themeStore.theme === theme ? 'selected' : ''
-          return `<option value="${theme}" ${isSelected}>${theme}</option>`
-        })
-        .join('')
-    )
-    .on('change', function() {
-      const $this = $(this)
-      const theme = $this.val()
-
-      if (theme !== themeStore.theme) {
-        $body.addClass('theme-' + theme).removeClass('theme-' + themeStore.theme)
-        themeStore.setTheme(theme)
-      }
-    })
-
-  $body.addClass('theme-' + themeStore.theme)
+  $body.addClass('theme-' + theme)
 
   $sidebar
     .on('click', '.J-sidebar-logo', function() {

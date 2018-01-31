@@ -1,9 +1,7 @@
-import config from 'config'
+import {lsPostsKey, lsPostsExpiration} from 'config'
 import { tabStore } from '#/stores'
 import { formatDate } from '#/utils'
 const ls = localStorage
-const lsPostsKey = config.lsPostsKey
-const lsPostsExpiration = config.lsPostsExpiration
 
 export default class {
   fetchPost(id) {

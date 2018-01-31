@@ -1,7 +1,4 @@
-import config from 'config'
-
-const lsPostTabKey = config.lsPostTabKey
-const lsPostTabExpiration = config.lsPostTabExpiration
+import {lsPostTabKey, lsPostTabExpiration} from 'config'
 const ls = localStorage
 
 export default class {

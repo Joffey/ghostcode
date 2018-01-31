@@ -1,4 +1,3 @@
-import config from 'config'
 import './style.scss'
 import { tabStore } from '#/stores'
 import history from '#/history'

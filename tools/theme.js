@@ -6,6 +6,8 @@
 const fs = require('fs')
 const path = require('path')
 
+const { theme } = require('../config')
+
 const themesPath = path.resolve(__dirname, '../themes')
 const themeStyleRoot = path.resolve(__dirname, '../src/styles/themes')
 const themeDefaultVars = fs.readFileSync(path.resolve(themeStyleRoot, 'default.scss')).toString()
@@ -13,6 +15,7 @@ const themeCommonStyle = fs.readFileSync(path.resolve(themeStyleRoot, 'common.sc
 
 const themes = fs
   .readdirSync(themesPath)
+  .filter(themePath => themePath.indexOf(theme) > -1)
   .map(themeName => {
     if (themeName.startsWith('.') || themeName === 'result.json') return
 
@@ -30,8 +33,6 @@ const themes = fs
 
     const themeNamePrefix = themeName
       .match(/^(.*)\..+$/)[1]
-      .split('_')
-      .join('-')
     const themeStyleItemPath = path.resolve(themeStyleRoot, themeNamePrefix)
 
     if (!fs.existsSync(themeStyleItemPath)) {
@@ -40,9 +41,7 @@ const themes = fs
 
     fs.writeFileSync(
       path.resolve(themeStyleItemPath, 'index.scss'),
-      [`.theme-${themeNamePrefix} {\n`, `${themeDefaultVars}\n\n`, `${str}\n\n`, `${themeCommonStyle}\n\n`, '}'].join(
-        ''
-      )
+      [`.theme-${themeNamePrefix} {\n`, `${themeDefaultVars}\n\n`, `${str}\n\n`, `${themeCommonStyle}\n\n`, '}'].join('')
     )
 
     return {
@@ -53,7 +52,4 @@ const themes = fs
   .filter(t => t)
 
 fs.writeFileSync(path.resolve(themeStyleRoot, 'index.scss'), themes.map(theme => theme.import).join(''))
-fs.writeFileSync(
-  path.resolve(themesPath, 'result.json'),
-  `{\n  "themes": [${themes.map(theme => `"${theme.name}"`)}]\n}`
-)
+fs.writeFileSync(path.resolve(themesPath, 'result.json'), `{\n  "themes": [${themes.map(theme => `"${theme.name}"`)}]\n}`)

@@ -6,7 +6,7 @@ const srcPath = path.resolve(__dirname, "src");
 module.exports = {
   devtool: "#inline-source-map",
   entry: {
-    coder: "./src/coder.js"
+    ghostcode: "./src/ghostcode.js"
   },
   output: {
     path: path.resolve(__dirname, "assets/built"),
@@ -59,7 +59,7 @@ module.exports = {
   },
   plugins: [
     new ExtractText({
-      filename: "coder.css",
+      filename: "ghostcode.css",
       allChunks: true
     })
   ]

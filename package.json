@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "rimraf assets/built && webpack -w --hide-modules",
     "pretheme": "node tools/themeFormat.js",
-    "theme": "nodemon tools/theme.js -w src/styles/themes/common.scss -w tools/theme.js -w src/styles/themes/default.scss -w themes --ext scss,js"
+    "theme": "nodemon tools/theme.js -w src/styles/themes/common.scss -w tools/theme.js -w src/styles/themes/default.scss -w config.js -w themes --ext scss,js"
   },
   "keywords": [
     "ghost",

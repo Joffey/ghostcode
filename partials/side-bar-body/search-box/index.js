@@ -6,6 +6,7 @@ import history from '#/history'
 $(function() {
   const $searchBox = $('#J-search-box')
   const $searchInput = $searchBox.find('.J-input-search')
+  const $results = $('#J-search-results')
   let $searchResultItems
 
   $searchInput.ghostHunter({
@@ -19,6 +20,11 @@ $(function() {
     `,
     onComplete: results => {
       $searchResultItems = $searchBox.find('.J-search-result-item')
+      const pathname = location.pathname
+      $searchResultItems.each(function() {
+        const $this = $(this)
+        $this.attr('href') === pathname && $this.addClass('active')
+      })
     }
   })
 
@@ -40,7 +46,7 @@ $(function() {
     })
     .on('click', '.J-search-clear', function() {
       $searchInput.val('')
-      $('#J-search-results').html('')
+      $results.html('')
       $searchInput.focus()
     })
 

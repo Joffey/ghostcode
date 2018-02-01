@@ -1,16 +1,12 @@
 import './style.scss'
-import { theme } from 'config'
 import { onresize } from '#/utils'
 
 $(document).ready(function() {
   const $sidebar = $('#J-sidebar-header')
-  const $body = $('body')
   const $sidebarBody = $('#J-side-bar-body')
   const $sidebarItem = $sidebar.find('.J-sidebar-item')
   let isSearchShowing = false
   let isSideBodyShowing = true
-
-  $body.addClass('theme-' + theme)
 
   $sidebar
     .on('click', '.J-sidebar-logo', function() {

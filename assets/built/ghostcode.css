@@ -9,7 +9,6 @@ html {
 
 /* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
 html.borderbox *, html.borderbox *:before, html.borderbox *:after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
@@ -288,28 +287,27 @@ h1, h2, h3, h4, h5, h6 {
   display: none !important; }
 
 .flex {
-  display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
 .flex-middle {
-  -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
 
 .flex-item {
-  -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
 
 .flex-item0 {
-  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto; }
 
 .flex-col {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
 
@@ -320,7 +318,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.6; }
 
 .hover-opacity1 {
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
   .hover-opacity1:hover {
     opacity: 1; }
@@ -456,6 +453,8 @@ input {
       border-color: #245d81; }
     .theme-dark_default .search-box .input-search::-webkit-input-placeholder {
       color: #fff; }
+    .theme-dark_default .search-box .input-search::-moz-placeholder {
+      color: #fff; }
     .theme-dark_default .search-box .input-search:-ms-input-placeholder {
       color: #fff; }
     .theme-dark_default .search-box .input-search::-ms-input-placeholder {
@@ -475,8 +474,7 @@ input {
       background: #05507c; }
 
 .theme-dark_default .post-tab .home-entry {
-  -webkit-box-shadow: 3px 6px 6px #1E1E1E;
-          box-shadow: 3px 6px 6px #1E1E1E;
+  box-shadow: 3px 6px 6px #1E1E1E;
   background-color: #333; }
 
 .theme-dark_default .post-tab .item {
@@ -490,8 +488,7 @@ input {
   background-color: #333; }
 
 .theme-dark_default .footer {
-  -webkit-box-shadow: 0 -1px 2px #02659f;
-          box-shadow: 0 -1px 2px #02659f;
+  box-shadow: 0 -1px 2px #02659f;
   color: #fff;
   background: #0285d2; }
 
@@ -588,11 +585,10 @@ Style with support for rainbow parens
 
 @media (max-width: 700px) {
   .site-wrapper {
-    display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
   .side-bar-wrap {
@@ -619,7 +615,7 @@ Style with support for rainbow parens
       width: 100%;
       padding: 0;
       bottom: 30px;
-      -webkit-box-flex: 0;
+      -webkit-flex: none;
           -ms-flex: none;
               flex: none;
       overflow: auto;
@@ -641,7 +637,6 @@ Style with support for rainbow parens
     height: 100%;
     padding: 0 35px 0 15px;
     max-width: 300px;
-    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
     .post-tab .item .close {
       display: none;
@@ -704,19 +699,15 @@ Style with support for rainbow parens
 
 @-webkit-keyframes logo-breathing {
   0% {
-    -webkit-box-shadow: none;
-            box-shadow: none; }
+    box-shadow: none; }
   100% {
-    -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); } }
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); } }
 
 @keyframes logo-breathing {
   0% {
-    -webkit-box-shadow: none;
-            box-shadow: none; }
+    box-shadow: none; }
   100% {
-    -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); } }
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2); } }
 .search-box {
   height: 100%;
   overflow: auto;
@@ -733,7 +724,6 @@ Style with support for rainbow parens
   .search-box .input-search {
     width: 100%;
     padding: 0 5px;
-    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s; }
   .search-box .search-results {
     overflow: auto; }
@@ -753,7 +743,6 @@ Style with support for rainbow parens
   height: 100%;
   overflow: auto; }
   .blog-tree .blog-tree-posts {
-    -webkit-transition: height 0.15s;
     transition: height 0.15s;
     overflow: hidden; }
   .blog-tree .blog-tree-tag.post-hidden .blog-tree-tagname:before {
@@ -768,7 +757,6 @@ Style with support for rainbow parens
     padding: 0 12px;
     height: 26px;
     line-height: 26px;
-    -webkit-transition: background 0.3s;
     transition: background 0.3s; }
   .blog-tree .blog-tree-post-title,
   .blog-tree .blog-tree-no-posts {
@@ -799,7 +787,6 @@ Style with support for rainbow parens
       margin: 4px 0 0;
       background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTE2NjkxMDk4NzQ4IiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE0MjMyIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwvc3R5bGU+PC9kZWZzPjxwYXRoIGQ9Ik0zODQgNzY4IDY0MCA1MTIgMzg0IDI1NloiIHAtaWQ9IjE0MjMzIiBmaWxsPSIjZmZmZmZmIj48L3BhdGg+PC9zdmc+) no-repeat center center;
       background-size: 18px 18px;
-      -webkit-transition: -webkit-transform 0.2s;
       transition: -webkit-transform 0.2s;
       transition: transform 0.2s;
       transition: transform 0.2s, -webkit-transform 0.2s;
@@ -882,8 +869,7 @@ Style with support for rainbow parens
     height: 100px;
     margin: 0 auto;
     border-radius: 50%;
-    -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2); }
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2); }
   .author-wrap .author-meta a {
     display: inline-block;
     margin: 0 5px; }

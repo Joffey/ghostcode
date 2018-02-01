@@ -5,6 +5,7 @@ $(document).ready(function() {
   const $sidebar = $('#J-sidebar-header')
   const $sidebarBody = $('#J-side-bar-body')
   const $sidebarItem = $sidebar.find('.J-sidebar-item')
+  const $html = $('html')
   let isSearchShowing = false
   let isSideBodyShowing = true
 
@@ -46,11 +47,13 @@ $(document).ready(function() {
   function sidebarBodyShow() {
     $sidebarBody.removeClass('hidden').show()
     isSideBodyShowing = true
+    $html.addClass('noscroll')
   }
   function sidebarBodyHide() {
     $sidebarBody.addClass('hidden').hide()
     isSideBodyShowing = false
     $sidebarItem.removeClass('active')
+    $html.removeClass('noscroll')
   }
 
   emitter.on('sidebar-hidden', function () {

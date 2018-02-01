@@ -35,7 +35,9 @@ a,
 a:active {
   color: $editor-foreground;
 }
-
+& {
+  background: $editor-background;
+}
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -108,9 +110,6 @@ a:active {
   .home-entry {
     box-shadow: 3px 6px 6px $editor-background;
     background-color: $editorGroupHeader-tabsBackground;
-  }
-  .fixed {
-    // box-shadow: 0 0 2px $tab-border;
   }
   .item {
     border-right: 1px solid $tab-border;

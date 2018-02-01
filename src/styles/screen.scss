@@ -27,9 +27,40 @@
 }
 
 @media (max-width: 700px) {
+  html,
+  body {
+    height: inherit;
+    overflow: auto;
+  }
   .site-wrapper {
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    .site-content {
+      .post-content-wrap {
+        height: auto;
+        overflow: auto;
+        .post {
+          padding: 0 15px;
+          .post-feature-image {
+            margin: 0 -15px;
+          }
+        }
+      }
+    }
+    .footer {
+      display: block;
+      position: static;
+      height: auto;
+      padding: 20px;
+      box-shadow: none;
+      background: transparent;
+      .powered {
+        flex: none;
+        text-align: center;
+      }
+      .meta {
+        display: none;
+      }
+    }
   }
   .side-bar-wrap {
     position: relative;
@@ -57,7 +88,7 @@
       top: $side-bar-header-width;
       width: 100%;
       padding: 0;
-      bottom: $footer-height;
+      bottom: 0;
       flex: none;
       overflow: auto;
       z-index: 8;
@@ -65,9 +96,6 @@
   }
   .post-tab {
     display: none;
-  }
-  .footer {
-    position: static;
   }
 }
 @media (max-width: 650px) {

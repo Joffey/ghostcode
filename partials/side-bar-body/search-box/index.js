@@ -8,6 +8,7 @@ $(function() {
   const $searchInput = $searchBox.find('.J-input-search')
   const $results = $('#J-search-results')
   let $searchResultItems
+  const $win = $(window)
 
   $searchInput.ghostHunter({
     results: '#J-search-results',
@@ -34,6 +35,9 @@ $(function() {
       if (isPostPage()) {
         e.preventDefault()
 
+        if ($win.width() <= 700) {
+          emitter.emit('sidebar-hidden')
+        }
         const id = $this.data('id')
         const url = $this.attr('href')
         emitter.emit('add-post-tab', {

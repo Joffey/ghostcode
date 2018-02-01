@@ -79,7 +79,7 @@ $(document).ready(function() {
       const id = $this.data('id')
       const url = $this.attr('href')
 
-      if ($win.width() < 450) {
+      if ($win.width() <= 700) {
         emitter.emit('sidebar-hidden')
       }
 

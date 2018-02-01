@@ -54,7 +54,7 @@ This is a `vscode-like` Ghost theme, welcome to <b>STAR</b> :) (It's still under
 5. Copy and put this file into `ghostcode/themes/` folder
 6. Regist in `./config.js` `theme` field
 7. Then run `npm run theme` command to turn this .json into css style
-7. Edit `./default.hbs`, add `theme-{your-theme-name}` to body class, remember to remove the default theme class
+7. Edit `./default.hbs`, add `theme-{your-theme-name}` to html class, remember to remove the default theme class
 8. Zip and upload to your websit
 
 

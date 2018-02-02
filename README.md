@@ -1,6 +1,8 @@
-# ghostcode
+# ghostcode - ghost theme
 
-This is a `vscode-like` Ghost theme, welcome to <b>STAR</b> :) (It's still under development)
+This is a `vscode-like` Ghost theme, and support vscode [color-theme](https://marketplace.visualstudio.com/search?term=tag%3Acolor-theme&target=VSCode&category=All%20categories&sortBy=Relevance)
+
+Welcome to <b>STAR</b> :) (It's still under development)
 
 ## Screenshots
 <div align="center">
@@ -44,17 +46,20 @@ This is a `vscode-like` Ghost theme, welcome to <b>STAR</b> :) (It's still under
 2. Go to admin panel (`{your-domain}/ghost/#/settings/design/uploadtheme`) and drag `ghostcode-master.zip` to upload
 3. Chose `active` to make it work
 
-### Advance - Build your own color theme
-1. [Download](https://github.com/rangzf/ghostcode/archive/master.zip) and unzip or [clone](https://github.com/rangzf/ghostcode) from github
-2. CD to ghostcode theme folder and run `npm install` to install dependencies
+### Advance - Custom your own color theme
+> ghostcode support vscode theme .json file
+ 
+
+1. Get [ghostcode](https://github.com/rangzf/ghostcode/archive/master.zip) theme and unzip it
+2. `cd` to ghostcode theme and run `npm install` to install dependencies
 3. Get the source code of your favorite [vscode color-theme](https://marketplace.visualstudio.com/search?term=tag%3Acolor-theme&target=VSCode&category=All%20categories&sortBy=Relevance) and download it through:
 	1. Theme github page
 	2. Install it into/from your vscode, and then find it in your disk (Mac: /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/extensions/theme-*)
-4. CD to your theme, usually in the `themes` directory, you can find `.json` file, that's it
+4. `cd` to the vscode theme above, usually in the `themes` directory, you can find `.json` file, that's it
 5. Copy and put this file into `ghostcode/themes/` folder
 6. Regist in `./config.js` `theme` field
-7. Then run `npm run theme` command to turn this .json into css style
-7. Edit `./default.hbs`, add `theme-{your-theme-name}` to html class, remember to remove the default theme class
-8. Zip and upload to your websit
+7. Then run `npm run theme` command to turn this .json file into css
+7. Edit `./default.hbs`, add class `theme-{your-theme-name}` to `html` element, remember to remove the default theme class
+8. Zip and upload to your website
 
 

@@ -5,6 +5,7 @@ $(document).ready(function() {
   const $sidebar = $('#J-sidebar-header')
   const $sidebarBody = $('#J-side-bar-body')
   const $sidebarItem = $sidebar.find('.J-sidebar-item')
+  const $header = $('.blog-header')
   const $html = $('html')
   let isSearchShowing = false
   let isSideBodyShowing = true
@@ -67,5 +68,10 @@ $(document).ready(function() {
     if(width >= 800) {
       sidebarBodyShow()
     }
+  })
+
+  // header logic
+  $header.on('click', '.J-blog-nav-trigger', function () {
+    emitter.emit('nav-open')
   })
 })

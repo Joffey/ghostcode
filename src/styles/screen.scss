@@ -70,16 +70,13 @@
     overflow: visible;
     z-index: 2;
     .side-bar-header {
-      width: 100%;
-      height: $side-bar-header-width;
-      padding: 0 15px;
-      overflow: hidden;
-      .item {
-        display: inline-block;
-      }
-      .home,
-      .search {
-        float: right;
+      display: none;
+    }
+    .blog-header {
+      padding: 0 10px;
+      .blog-title {
+        text-align: center;
+        margin: 0 0 0 -46px;
       }
     }
     .side-bar-body {

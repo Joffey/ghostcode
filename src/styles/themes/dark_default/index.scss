@@ -56,10 +56,11 @@ a:active {
   background: $editor-background;
 }
 
-.side-bar-header {
+.blog-header,
+.side-bar-header,
+.blog-nav .nav {
   background: $debugToolBar-background;
 }
-
 .side-bar-body {
   background: $sideBar-background;
 }

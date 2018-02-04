@@ -1,22 +1,10 @@
 # ghostcode - ghost theme
 
+[Online demo](http://wuliwa.la/)
+
 This is a `vscode-like` Ghost theme, and support vscode [color-theme](https://marketplace.visualstudio.com/search?term=tag%3Acolor-theme&target=VSCode&category=All%20categories&sortBy=Relevance)
 
 Welcome to <b>STAR</b> :) (It's still under development)
-
-## Screenshots
-<div align="center">
-	<div>Home</div>
-	<img src="./screenshots/Home.png" />
-	<div>Change to vscode theme 'abyss'</div>
-	<img src="./screenshots/Change-theme.png" />
-	<div>Post</div>
-	<img src="./screenshots/Post.png" />
-	<div>Author</div>
-	<img src="./screenshots/Author.png" />
-	<div>Search</div>
-	<img src="./screenshots/Search.png" />
-</div>
 
 ## Dev Progress
 
@@ -29,7 +17,7 @@ Welcome to <b>STAR</b> :) (It's still under development)
 - [x] ~~Prev / Next post~~(removed to simplify the theme, nav through sidebar is super easy)
 - [x] Change theme(Support official `vscode` theme)
 - [x] Search all posts
-- [x] Responsive(v1, need to optimize)
+- [ ] Responsive(v1, need to optimize)
 
 ### P1
 - [x] Post Cache

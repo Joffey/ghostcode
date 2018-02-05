@@ -36,7 +36,7 @@ $(function() {
         e.preventDefault()
 
         if ($win.width() <= 700) {
-          emitter.emit('sidebar-hidden')
+          emitter.emit('switch-sidebar', { target: 'search', toggle: true })
         }
         const id = $this.data('id')
         const url = $this.attr('href')
@@ -56,7 +56,6 @@ $(function() {
 
   history.listen(location => {
     const nextTab = location.state
-
     $searchResultItems &&
       $searchResultItems
         .removeClass('active')

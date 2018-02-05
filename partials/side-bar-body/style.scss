@@ -2,6 +2,9 @@
 
 .side-bar-body {
   width: $side-bar-body-width;
+  &.show {
+    display: block;
+  }
   header {
     padding: 5px 15px;
     .title {

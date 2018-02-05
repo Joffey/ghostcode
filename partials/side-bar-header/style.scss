@@ -6,11 +6,6 @@
   height: 100%;
   overflow: auto;
   z-index: 2;
-  .blog-logo-wrap {
-    .blog-title {
-      text-transform: initial;
-    }
-  }
   .item {
     display: block;
     width: $side-bar-header-width;
@@ -20,7 +15,6 @@
     background-size: 30px 30px;
     background-repeat: no-repeat;
     background-position: center center;
-    text-transform: uppercase;
     cursor: pointer;
     &:hover,
     &.active {
@@ -39,9 +33,26 @@
   .skin {
     background-image: url(~icons/skin.svg);
   }
-  .home {
+  [role='menuitem'] {
+    a {
+      display: block;
+      height: $side-bar-header-width;
+      background-repeat: no-repeat;
+      background-position: center center;
+      text-indent: -$side-bar-header-width;
+      background-size: 32px 32px;
+      transform: opacity;
+      opacity: .8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .nav-home a {
     background-image: url(~icons/home.svg);
-    background-size: 32px 32px;
+  }
+  .nav-git a {
+    background-image: url(~icons/git-branch.svg);
   }
   .skin {
     position: absolute;
@@ -65,18 +76,25 @@
   }
 }
 .blog-header {
-  position: relative;
-  height: $blog-header-height;
-  line-height: $blog-header-height;
+  display: none;
+  padding: 10px 0;
+  text-align: center;
+  overflow: hidden;
+  background-size: cover;
   .logo {
-    width: $blog-logo-width - 10px;
-    height: $blog-logo-width - 10px;
+    display: block;
+    width: $blog-logo-width + 10px;
+    height: $blog-logo-width + 10px;
   }
-  .blog-nav-trigger {
-    width: 18px;
-    height: 18px;
-    background: url(~icons/bars.svg) no-repeat 0 0;
-    background-size: 18px 18px;
+  .nav-wrap {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    .nav,
+    [role='menuitem'] {
+      display: inline-block;
+      padding: 0 3px;
+      cursor: pointer;
+    }
   }
 }
 @keyframes logo-breathing {

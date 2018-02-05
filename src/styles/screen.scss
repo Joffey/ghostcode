@@ -27,14 +27,27 @@
 }
 
 @media (max-width: 700px) {
+  $side-bar-header-width: $side-bar-header-width - 10px;
   html,
   body {
-    height: inherit;
     overflow: auto;
+  }
+
+  .archive-show {
+    .site-wrapper,
+    .side-bar-wrap {
+      height: 100%;
+    }
+  }
+  html:not(.noscroll) {
+    .site-wrapper {
+      overflow: auto;
+    }
   }
   .site-wrapper {
     padding: 0;
     .site-content {
+      height: auto;
       .post-content-wrap {
         height: auto;
         overflow: auto;
@@ -65,25 +78,21 @@
   .side-bar-wrap {
     position: relative;
     display: block;
+    height: auto;
     float: none;
-    height: $side-bar-header-width;
     overflow: visible;
     z-index: 2;
     .side-bar-header {
       display: none;
     }
     .blog-header {
-      padding: 0 10px;
-      .blog-title {
-        text-align: center;
-        margin: 0 0 0 -46px;
-      }
+      display: block;
     }
     .side-bar-body {
-      position: fixed;
+      position: absolute;
+      top: 144px;
       left: 0;
-      top: $side-bar-header-width;
-      width: 100%;
+      right: 0;
       padding: 0;
       bottom: 0;
       flex: none;

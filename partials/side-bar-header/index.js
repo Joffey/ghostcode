@@ -2,13 +2,10 @@ import './style.scss'
 import { onresize } from '#/utils'
 
 $(document).ready(function() {
+  const $sideWrap = $('#J-sidebar-wrap')
   const $sidebar = $('#J-sidebar-header')
-  const $sidebarBody = $('#J-side-bar-body')
   const $sidebarItem = $sidebar.find('.J-sidebar-item')
   const $header = $('.blog-header')
-  const $html = $('html')
-  let isSearchShowing = false
-  let isSideBodyShowing = true
 
   $sidebar
     .on('click', '.J-sidebar-logo', function() {
@@ -45,33 +42,23 @@ $(document).ready(function() {
       }
     })
 
+  $sideWrap.on('click', '.J-sidebar-trigger', function() {
+    const target = $(this).data('target')
+    if (target === 'search') {
+      import(/* webpackChunkName: "search-box" */ 'partials/side-bar-body/search-box').then(() => {
+        emitter.emit('switch-sidebar', { target, toggle: true })
+      })
+    } else {
+      emitter.emit('switch-sidebar', { target, toggle: true })
+    }
+  })
+
   function sidebarBodyShow() {
-    $sidebarBody.removeClass('hidden').show()
-    isSideBodyShowing = true
-    $html.addClass('noscroll')
+    emitter.emit('sidebar-body-show')
   }
+
   function sidebarBodyHide() {
-    $sidebarBody.addClass('hidden').hide()
-    isSideBodyShowing = false
+    emitter.emit('sidebar-body-hide')
     $sidebarItem.removeClass('active')
-    $html.removeClass('noscroll')
   }
-
-  emitter.on('sidebar-hidden', function () {
-    sidebarBodyHide()
-  })
-
-  onresize(function(e, width) {
-    if (width < 800) {
-      sidebarBodyHide()
-    }
-    if(width >= 800) {
-      sidebarBodyShow()
-    }
-  })
-
-  // header logic
-  $header.on('click', '.J-blog-nav-trigger', function () {
-    emitter.emit('nav-open')
-  })
 })

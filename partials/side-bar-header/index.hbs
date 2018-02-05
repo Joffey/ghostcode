@@ -1,10 +1,15 @@
 <nav class="side-bar-header flex-item0" id="J-sidebar-header">
   <div class="logo item active J-sidebar-item J-sidebar-logo" data-name="logo" style="background-image: url({{@blog.logo}});"></div>
-  <a href="/" class="home item light hover-opacity1"></a>
-  <div class="search item light hover-opacity1 J-sidebar-search J-sidebar-item" data-name="search"></div>
+  {{navigation}}
+  <div class="search item light J-sidebar-search J-sidebar-item" data-name="search"></div>
 </nav>
-<header class="flex blog-header flex-middle">
-  <div class="logo flex-item0" style="background-image: url({{@blog.logo}});"></div>
+<header id="J-blog-header" class="blog-header">
+  <a href="/" class="logo flex-item0" style="background-image: url({{@blog.logo}});"></a>
   <div class="blog-title flex-item">{{@blog.title}}</div>
-  <div class="blog-nav-trigger J-blog-nav-trigger flex-item0"></div>
+  <div class="nav-wrap">
+    {{navigation}}
+    <div role="menuitem" class="archive J-sidebar-trigger" data-target="blog-tree">archive</div>
+    <a href="/about" role="menuitem" class="about">about</a>
+    <div role="menuitem" class="about J-sidebar-trigger" data-target="search">search</div>
+  </div>
 </header>

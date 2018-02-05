@@ -4,7 +4,6 @@ import './styles/index.scss'
 
 import 'partials/post-tab'
 
-import 'partials/nav'
 import 'partials/side-bar-header'
 
 import 'partials/side-bar-body'

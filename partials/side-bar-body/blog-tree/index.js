@@ -80,7 +80,7 @@ $(document).ready(function() {
       const url = $this.attr('href')
 
       if ($win.width() <= 700) {
-        emitter.emit('sidebar-hidden')
+        emitter.emit('switch-sidebar', {target: 'blog-tree', toggle: true })
       }
 
       e.preventDefault()

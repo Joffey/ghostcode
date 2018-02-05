@@ -31,6 +31,19 @@ $textLink-foreground: #4080D0;
   $activityBarBadge-background: #007ACC;
   $sideBarTitle-foreground: #BBBBBB;
 
+&,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+.typo-em,
+.typo em,
+legend,
+caption,
 a,
 a:active {
   color: $editor-foreground;
@@ -57,8 +70,7 @@ a:active {
 }
 
 .blog-header,
-.side-bar-header,
-.blog-nav .nav {
+.side-bar-header {
   background: $debugToolBar-background;
 }
 .side-bar-body {

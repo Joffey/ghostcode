@@ -30,7 +30,7 @@
   $side-bar-header-width: $side-bar-header-width - 10px;
   html,
   body {
-    overflow: auto;
+    overflow: visible;
   }
 
   .archive-show {
@@ -41,7 +41,7 @@
   }
   html:not(.noscroll) {
     .site-wrapper {
-      overflow: auto;
+      overflow: visible;
     }
   }
   .site-wrapper {

@@ -1,3 +1,38 @@
+.theme-dark_defaults {
+$editor-foreground: #fff;
+$sideBar-background: transparent;
+$list-hoverBackground: #303334;
+$tab-inactiveBackground: #333;
+$tab-activeBackground: #1E1E1E;
+$sideBar-background: #2a2a2b;
+$debugToolBar-background: #3a3a3a;
+$list-activeSelectionBackground: #05507c;
+$statusBar-background: #0285d2;
+$statusBar-foreground: #fff;
+$tab-border: #2a2a2b;
+$input-border: transparent;
+$inputOption-activeBorder: #245d81;
+$input-foreground: #fff;
+$input-background: #444;
+$editorGroupHeader-tabsBackground: #333;
+$input-placeholderForeground: #fff;
+$sideBar-foreground: #fff;
+$badge-foreground: #fff;
+$scrollbarSlider-background: #646464;
+$scrollbarSlider-hoverBackground: #5b5b5b;
+$textLink-foreground: #4080D0;
+
+  $editor-background: #1E1E1E;
+  $editor-foreground: #D4D4D4;
+  $editor-inactiveSelectionBackground: #3A3D41;
+  $editorIndentGuide-background: #404040;
+  $editor-selectionHighlightBackground: rgba(173, 214, 255, 0.15);
+  $list-dropBackground: #383B3D;
+  $activityBarBadge-background: #007ACC;
+  $sideBarTitle-foreground: #BBB;
+  $activityBar-background: #333;
+  $activityBar-foreground: #fff;
+
 &,
 h1,
 h2,
@@ -130,4 +165,7 @@ a:active {
 
 .link {
   color: $textLink-foreground;
+}
+
+
 }

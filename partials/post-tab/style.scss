@@ -4,7 +4,6 @@
   position: relative;
   height: $post-tab-height;
   line-height: $post-tab-height;
-  cursor: pointer;
   .container {
     width: 100%;
     overflow: auto;
@@ -15,15 +14,14 @@
     padding: 0 35px 0 15px;
     max-width: 300px;
     transition: opacity 0.3s;
+    cursor: pointer;
     .close {
       display: none;
       position: absolute;
       right: 15px;
       top: ($post-tab-height - 10)/2;
-      width: 10px;
-      height: 10px;
-      background: url(~icons/close.svg) no-repeat center center;
-      background-size: 10px 10px;
+      line-height: normal;
+      font-size: 10px;
     }
     &.active {
       opacity: 1;

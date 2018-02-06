@@ -1,0 +1,25 @@
+{
+	"name": "Light Default Colors",
+	"colors": {
+		"editor.background": "#FFFFFF",
+		"editor.foreground": "#000000",
+		"editor.inactiveSelectionBackground": "#E5EBF1",
+		"editorIndentGuide.background": "#D3D3D3",
+		"editor.selectionHighlightBackground": "#ADD6FF4D",
+		"editorSuggestWidget.background": "#F3F3F3",
+		"sideBarTitle.foreground": "#6F6F6F",
+		"sideBar.foreground": "#6F6F6F",
+		"editorGroupHeader.tabsBackground": "#fff",
+		"tab.inactiveBackground": "#ccc",
+		"tab.border": "#fff",
+		"debugToolBar.background": "#EFEFF6",
+		"list.hoverBackground": "#f5f5f5",
+		"input.background": "#FEFFFE",
+		"input.foreground": "#000",
+		"input.placeholderForeground": "#000",
+		"badge.foreground": "#000000",
+		"activityBarBadge.background": "#007ACC",
+		"activityBar.background": "#fff",
+		"activityBar.foreground": "#000000"
+	}
+}

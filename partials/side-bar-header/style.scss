@@ -12,9 +12,9 @@
     height: $side-bar-header-width;
     line-height: $side-bar-header-width;
     text-align: center;
-    background-size: 30px 30px;
-    background-repeat: no-repeat;
-    background-position: center center;
+    mask-size: 30px 30px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
     cursor: pointer;
     &:hover,
     &.active {
@@ -28,19 +28,16 @@
     cursor: pointer;
   }
   .search {
-    background-image: url(~icons/search.svg);
-  }
-  .skin {
-    background-image: url(~icons/skin.svg);
+    mask-image: url(~icons/search.svg);
   }
   [role='menuitem'] {
     a {
       display: block;
       height: $side-bar-header-width;
-      background-repeat: no-repeat;
-      background-position: center center;
+      mask-repeat: no-repeat;
+      mask-position: center center;
       text-indent: -$side-bar-header-width;
-      background-size: 32px 32px;
+      mask-size: 30px 30px;
       transform: opacity;
       opacity: .8;
       &:hover {
@@ -49,16 +46,10 @@
     }
   }
   .nav-home a {
-    background-image: url(~icons/home.svg);
+    mask-image: url(~icons/home.svg);
   }
   .nav-git a {
-    background-image: url(~icons/git-branch.svg);
-  }
-  .skin {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    mask-image: url(~icons/git-branch.svg);
   }
 }
 
@@ -77,10 +68,9 @@
 }
 .blog-header {
   display: none;
-  padding: 10px 0;
+  padding: 2px 0 10px;
   text-align: center;
   overflow: hidden;
-  background-size: cover;
   .logo {
     display: block;
     width: $blog-logo-width + 10px;

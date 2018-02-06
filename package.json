@@ -8,7 +8,7 @@
     "build": "rimraf assets/built && webpack --hide-modules -p --devtool none",
     "theme": "node tools/themeFormat.js && node tools/theme.js",
     "pretheme:dev": "node tools/themeFormat.js",
-    "theme:dev": "nodemon tools/theme.js -w src/styles/themes/common.scss -w tools/theme.js -w src/styles/themes/default.scss -w config.js -w themes --ext scss,js"
+    "theme:dev": "nodemon tools/theme.js -w src/styles/themes/common.scss -w tools/theme.js -w src/styles/themes/default.scss -w config.js --ext scss,js"
   },
   "keywords": [
     "ghost",
@@ -40,6 +40,7 @@
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.8",
     "extract-text-webpack-plugin": "^3.0.2",
+    "hex-to-rgba": "^1.0.1",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.0.10",
     "sass-loader": "^6.0.6",

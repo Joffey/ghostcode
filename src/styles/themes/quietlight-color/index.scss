@@ -1,0 +1,224 @@
+.theme-quietlight-color {
+$editor-foreground: #fff;
+$sideBar-background: transparent;
+$list-hoverBackground: #303334;
+$tab-inactiveBackground: #333;
+$tab-activeBackground: #1E1E1E;
+$sideBar-background: #2a2a2b;
+$debugToolBar-background: #3a3a3a;
+$list-activeSelectionBackground: #05507c;
+$statusBar-background: #0285d2;
+$statusBar-foreground: #fff;
+$tab-border: #2a2a2b;
+$input-border: transparent;
+$inputOption-activeBorder: #245d81;
+$input-foreground: #fff;
+$input-background: #444;
+$editorGroupHeader-tabsBackground: #333;
+$input-placeholderForeground: #fff;
+$sideBar-foreground: #fff;
+$badge-foreground: #fff;
+$scrollbarSlider-background: #646464;
+$scrollbarSlider-hoverBackground: #5b5b5b;
+$textLink-foreground: #4080D0;
+
+  $editor-background: #F5F5F5;
+  $editor-foreground: #000000;
+  $editor-inactiveSelectionBackground: #E5EBF1;
+  $editorIndentGuide-background: #D3D3D3;
+  $editor-selectionHighlightBackground: rgba(173, 214, 255, 0.3);
+  $editorSuggestWidget-background: #F3F3F3;
+  $activityBarBadge-background: #705697;
+  $sideBarTitle-foreground: #6F6F6F;
+  $sideBar-foreground: #6F6F6F;
+  $editorGroupHeader-tabsBackground: #fff;
+  $tab-inactiveBackground: #ccc;
+  $tab-border: #fff;
+  $debugToolBar-background: #EFEFF6;
+  $list-hoverBackground: #f5f5f5;
+  $input-background: #FEFFFE;
+  $input-foreground: #000;
+  $input-placeholderForeground: #000;
+  $badge-foreground: #000000;
+  $focusBorder: #A6B39B;
+  $pickerGroup-foreground: #A6B39B;
+  $pickerGroup-border: #749351;
+  $list-activeSelectionForeground: #6c6c6c;
+  $list-focusBackground: #CADEB9;
+  $list-activeSelectionBackground: #c4d9b1;
+  $list-inactiveSelectionBackground: #d3dbcd;
+  $list-highlightForeground: #9769dc;
+  $selection-background: #C9D0D9;
+  $editorWhitespace-foreground: #AAAAAA;
+  $editor-lineHighlightBackground: #E4F6D4;
+  $editor-selectionBackground: #C9D0D9;
+  $panel-background: #F5F5F5;
+  $sideBar-background: #F2F2F2;
+  $sideBarSectionHeader-background: #ede8ef;
+  $editorLineNumber-foreground: #9DA39A;
+  $editorCursor-foreground: #54494B;
+  $inputOption-activeBorder: #adafb7;
+  $dropdown-background: #F5F5F5;
+  $editor-findMatchBackground: #BF9CAC;
+  $editor-findMatchHighlightBackground: #edc9d8;
+  $peekViewEditor-matchHighlightBackground: #C2DFE3;
+  $peekViewTitle-background: #F2F8FC;
+  $peekViewEditor-background: #F2F8FC;
+  $peekViewResult-background: #F2F8FC;
+  $peekView-border: #705697;
+  $peekViewResult-matchHighlightBackground: #93C6D6;
+  $statusBar-background: #705697;
+  $statusBar-noFolderBackground: #705697;
+  $statusBar-debuggingBackground: #705697;
+  $activityBar-background: #EDEDF5;
+  $activityBar-foreground: #705697;
+  $titleBar-activeBackground: #c4b7d7;
+  $button-background: #705697;
+  $notification-background: #442e66;
+  $editorGroup-dropBackground: rgba(201, 208, 217, 0.53);
+  $inputValidation-infoBorder: #4ec1e5;
+  $inputValidation-infoBackground: #f2fcff;
+  $inputValidation-warningBackground: #fffee2;
+  $inputValidation-warningBorder: #ffe055;
+  $inputValidation-errorBackground: #ffeaea;
+  $inputValidation-errorBorder: #f1897f;
+  $errorForeground: #f1897f;
+  $badge-background: rgba(112, 86, 151, 0.67);
+  $progressBar-background: #705697;
+
+&,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+.typo-em,
+.typo em,
+legend,
+caption,
+a,
+a:active {
+  color: $editor-foreground;
+}
+& {
+  background: $editor-background;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: $scrollbarSlider-background;
+  &:hover {
+    background: $scrollbarSlider-hoverBackground;
+  }
+}
+
+.site-wrapper {
+  color: $editor-foreground;
+  background: $editor-background;
+}
+
+.blog-header,
+.side-bar-header {
+  color: $activityBar-foreground;
+  background: $activityBar-background;
+}
+.blog-header {
+  .blog-title,
+  a {
+    color: $activityBar-foreground;
+  }
+}
+.side-bar-header {
+  [role='menuitem'] a,
+  .search {
+    background-color: $activityBar-foreground;
+  }
+}
+.side-bar-body {
+  background: $sideBar-background;
+}
+.blog-tree {
+  .blog-tree-tagname,
+  .blog-tree-post {
+    &.active {
+      background: $list-activeSelectionBackground;
+    }
+    &:hover:not(.active) {
+      background: $list-hoverBackground;
+    }
+  }
+}
+
+.search-box {
+  background: $sideBar-background;
+  .input-search {
+    color: $input-foreground;
+    border: 1px solid $input-border;
+    background: $input-background;
+    &:focus {
+      border-color: $inputOption-activeBorder;
+    }
+    &::placeholder {
+      color: $input-placeholderForeground;
+    }
+  }
+  .search-results-amount {
+    color: $badge-foreground;
+    background: $sideBar-background;
+  }
+  .search-result-item {
+    color: $sideBar-foreground;
+    &:hover {
+      background: $list-hoverBackground;
+    }
+    &.active {
+      background: $list-activeSelectionBackground;
+    }
+  }
+}
+
+.post-tab {
+  .item {
+    border-right: 1px solid $tab-border;
+    background: $tab-inactiveBackground;
+  }
+  .active {
+    background: $editor-background;
+  }
+  .container {
+    background-color: $editorGroupHeader-tabsBackground;
+  }
+}
+
+.footer {
+  box-shadow: 0 -1px 2px darken($statusBar-background, 10%);
+  color: darken($statusBar-foreground, 10%);
+  background: $statusBar-background;
+  a {
+    color: $statusBar-foreground;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    color: $editor-foreground;
+  }
+}
+
+.post {
+  background: $editor-background;
+}
+
+.link {
+  color: $textLink-foreground;
+}
+
+
+}

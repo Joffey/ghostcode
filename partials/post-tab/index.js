@@ -9,6 +9,7 @@ $(function() {
   let $postTabs = $('#J-post-tab')
   const $scrollWrap = $('.J-post-tab-scroller-wrap')
   const ndScrollWrap = $scrollWrap.get(0)
+  const $iconClose = $scrollWrap.find('.icon-close')[0].outerHTML
 
   emitter.on('add-post-tab', post => {
     const tabs = tabStore.getTabs()
@@ -33,7 +34,7 @@ $(function() {
             tab =>
               `<div title="${tab.title}" class="J-tab-item light hover-opacity1 flex-item0 single-line item ${activeId === tab.id ? 'active' : ''}" data-id="${
                 tab.id
-              }">${tab.title}<i class="close J-post-tab-close lighter hover-opacity1" data-slug="${tab.slug}"></i></div>`
+              }">${tab.title}<i class="close J-post-tab-close lighter hover-opacity1" data-slug="${tab.slug}">${$iconClose}</i></div>`
           )
           .join('')
       )

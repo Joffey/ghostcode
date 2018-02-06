@@ -4,15 +4,12 @@
   top: 0;
   right: 0;
   bottom: 0;
-  &:after {
-    content: '';
+  svg {
     position: absolute;
     left: 50%;
     top: 50%;
     margin: -16px 0 0 -16px;
-    width: 32px;
-    height: 32px;
-    background: url(~icons/loading.svg) no-repeat 0 0;
+    font-size: 32px;
     transform-origin: center center;
     animation: loading 1s cubic-bezier(0.66, 0.22, 0.89, 0.25) infinite;
   }

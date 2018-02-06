@@ -2,6 +2,8 @@ import './emitter'
 
 import './styles/index.scss'
 
+import 'partials/icons'
+
 import 'partials/post-tab'
 
 import 'partials/side-bar-header'

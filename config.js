@@ -9,6 +9,7 @@ module.exports = {
   lsPostsKey: 'ghostcode-posts',
   // post expiration time 1min
   lsPostsExpiration: 1 * 60 * 1000,
-  // theme name from ./themes/result.json
-  theme: 'dark_default',
+  // [themeName, uiTheme]
+  // uiTheme:  vs-dark, vs(you can find it in theme-xx/package.json contributes.themes.uiTheme)
+  theme: ['dark_defaults', 'vs-dark'],
 }

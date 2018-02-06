@@ -1,4 +1,4 @@
-@import "~styles/var.scss";
+@import '~styles/var.scss';
 
 .search-box {
   height: 100%;
@@ -7,10 +7,7 @@
   header {
     .clear-results {
       display: inline-block;
-      width: 26px;
-      height: 26px;
-      background: url(~icons/clear-all.svg) no-repeat 0 0;
-      background-size: 26px 26px;
+      font-size: 26px;
       cursor: pointer;
     }
   }

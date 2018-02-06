@@ -68,7 +68,6 @@ $(document).ready(function() {
     })
     .on('click', '.J-go2post', function(e) {
       const $this = $(this)
-
       if (!$body.is('.post-template')) return
 
       if ($this.parents('.J-post').is('.active')) {
@@ -94,7 +93,6 @@ $(document).ready(function() {
 
   history.listen(location => {
     const nextTab = location.state
-
     $posts
       .removeClass('active')
       .filter((idx, post) => {

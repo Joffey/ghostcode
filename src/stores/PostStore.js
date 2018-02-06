@@ -20,7 +20,7 @@ export default class {
           })
           .done(data => {
             const post = data.posts[0] || {}
-            console.log(post)
+            // console.log(post)
             this.cachePost(id, post)
             return post
           })
@@ -39,7 +39,7 @@ export default class {
     const useable = post && +new Date() - post.timestamp <= lsPostsExpiration
 
     if (useable) {
-      console.info('[Post readed from cache]:', post.title)
+      // console.info('[Post readed from cache]:', post.title)
       const author = JSON.parse(post.author)
       return {
         posts: [{ ...post, author, fromCache: 1 }]
@@ -52,7 +52,7 @@ export default class {
   deletePostFromCache(id) {
     let lsPosts = ls.getItem(lsPostsKey)
     lsPosts = lsPosts ? JSON.parse(lsPosts) : {}
-    console.log('[deleted post success]:', lsPosts[id].title)
+    // console.log('[deleted post success]:', lsPosts[id].title)
 
     delete lsPosts[id]
 
@@ -87,7 +87,7 @@ export default class {
       delete lsPosts[shouldDeleteId]
     }
 
-    console.log(ids.length)
+    // console.log(ids.length)
     ls.setItem(lsPostsKey, JSON.stringify(lsPosts))
   }
 }

@@ -7,6 +7,7 @@ $(function() {
   if (!isPostPage()) return
 
   let $postTabs = $('#J-post-tab')
+  let $tabItems
   const $scrollWrap = $('.J-post-tab-scroller-wrap')
   const ndScrollWrap = $scrollWrap.get(0)
   const $iconClose = $scrollWrap.find('.icon-close')[0].outerHTML
@@ -27,7 +28,7 @@ $(function() {
     const tabs = tabStore.getTabs()
     const currentTab = tabStore.currentTab
 
-    const $active = $('#J-post-tab')
+    const $active = $postTabs
       .html(
         tabs
           .map(
@@ -40,10 +41,17 @@ $(function() {
       )
       .find('.active')
 
-    // not refetch current post
-    if (!currentTab || currentTab.id !== activeId) {
-      history.push(active.url, { ...active })
+    $tabItems = $postTabs.find('.J-tab-item')
+
+    if (!currentTab) {
       tabStore.setCurrentTab({ ...active })
+      history.replace(active.url, { ...active })
+    }
+
+    // not refetch current post
+    if (currentTab && currentTab.id !== activeId) {
+      tabStore.setCurrentTab({ ...active })
+      history.push(active.url, { ...active })
     }
 
     scroll2view($active)
@@ -99,4 +107,16 @@ $(function() {
   }
 
   hScroll($scrollWrap.get(0))
+
+  history.listen(location => {
+    const nextTab = location.state
+    const $active = $tabItems
+      .removeClass('active')
+      .filter((idx, post) => {
+        return $(post).data('id') === nextTab.id
+      })
+      .addClass('active')
+
+    scroll2view($active)
+  })
 })

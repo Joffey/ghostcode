@@ -6,7 +6,7 @@
   height: 100%;
   overflow: auto;
   z-index: 2;
-  .item {
+  .menuitem {
     display: block;
     width: $side-bar-header-width;
     height: $side-bar-header-width;
@@ -27,22 +27,19 @@
     opacity: 0;
     cursor: pointer;
   }
-  .search {
-    mask-image: url(~icons/search.svg);
-  }
-  [role='menuitem'] {
-    a {
-      display: block;
-      height: $side-bar-header-width;
-      mask-repeat: no-repeat;
-      mask-position: center center;
-      text-indent: -$side-bar-header-width;
-      mask-size: 30px 30px;
-      transform: opacity;
-      opacity: .8;
-      &:hover {
-        opacity: 1;
-      }
+  [role='menuitem'],
+  [role='menuitem'] a {
+    display: block;
+    display: block;
+    height: $side-bar-header-width;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    text-indent: -$side-bar-header-width;
+    mask-size: 30px 30px;
+    transform: opacity;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
     }
   }
   .nav-home a {
@@ -50,6 +47,13 @@
   }
   .nav-git a {
     mask-image: url(~icons/git-branch.svg);
+  }
+  .about {
+    mask-image: url(~icons/about.svg);
+  }
+  .search {
+    mask-image: url(~icons/search.svg);
+    mask-size: 28px 28px;
   }
 }
 

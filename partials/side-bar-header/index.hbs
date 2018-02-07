@@ -1,7 +1,8 @@
 <nav class="side-bar-header flex-item0" id="J-sidebar-header">
-  <div class="logo item active J-sidebar-item J-sidebar-logo" data-name="logo" style="background-image: url({{@blog.logo}});"></div>
+  <div class="logo menuitem active J-sidebar-item J-sidebar-logo" data-name="logo" style="background-image: url({{@blog.logo}});"></div>
   {{navigation}}
-  <div class="search item light J-sidebar-search J-sidebar-item" data-name="search"></div>
+  <a href="/about" role="menuitem" class="about menuitem" title="about">about</a>
+  <div role="menuitem" class="search menuitem light J-sidebar-search J-sidebar-item" title="search" data-name="search"></div>
 </nav>
 <header id="J-blog-header" class="blog-header">
   <a href="/" class="logo flex-item0" style="background-image: url({{@blog.logo}});"></a>

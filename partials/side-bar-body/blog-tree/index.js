@@ -78,8 +78,8 @@ $(document).ready(function() {
       const id = $this.data('id')
       const url = $this.attr('href')
 
-      if ($win.width() <= 700) {
-        emitter.emit('switch-sidebar', {target: 'blog-tree', toggle: true })
+      if ($win.width() <= 800) {
+        emitter.emit('switch-sidebar', { target: 'blog-tree' })
       }
 
       e.preventDefault()

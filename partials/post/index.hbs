@@ -1,13 +1,16 @@
 <div class="post-content-wrap typo flex-item" id="J-post-wrap">
   {{#post}}
+    <div class="post-feature-image J-post-feature-image {{#if feature_image}}{{else}}hidden{{/if}}">
+      <div class="loading">{{> "icons/loading"}}</div>
+      <figure style="background-image: url({{feature_image}})"></figure>
+    </div>
     <article id="J-post" class="post" data-id="{{id}}" data-title="{{title}}" data-slug="{{slug}}" data-url="{{url}}">
-      <div class="post-feature-image loading J-post-feature-image {{#if feature_image}}{{else}}hidden{{/if}}">
-        <figure style="background-image: url({{feature_image}})"></figure>
-      </div>
       <h1 class="post-title J-post-title">{{title}}</h1>
       <div class="post-meta lighter J-post-meta">Posted by {{author}} on {{date published_at format="YYYY.MM.DD"}}</div>
       <div class="post-content post-full-content J-post-content">{{{html}}}</div>
       <div class="hidden J-reading-time-hidden">{{reading_time}}</div>
+      <p>This Article Link:&nbsp;&nbsp;<a href="{{url absolute="true"}}">{{url absolute="true"}}</a></p>
+      <p>--<acronym title="End of File">EOF</acronym>--</p>
     </article>
     {{!-- prev next post start --}}
     {{!-- prev next post end --}}

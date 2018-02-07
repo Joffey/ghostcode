@@ -35,8 +35,8 @@ $(function() {
       if (isPostPage()) {
         e.preventDefault()
 
-        if ($win.width() <= 700) {
-          emitter.emit('switch-sidebar', { target: 'search', toggle: true })
+        if ($win.width() <= 800) {
+          emitter.emit('switch-sidebar', { target: 'search' })
         }
         const id = $this.data('id')
         const url = $this.attr('href')

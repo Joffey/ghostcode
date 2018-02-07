@@ -3,8 +3,22 @@
 .post-content-wrap {
   height: 100%;
   overflow: auto;
+  .post-feature-image {
+    position: relative;
+    height: 366px;
+    figure {
+      position: relative;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      z-index: 1;
+    }
+  }
   .post {
-    padding: 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 30px;
     .post-title {
       font-weight: 700;
       margin-bottom: 0;
@@ -12,19 +26,6 @@
     .post-meta {
       margin: 0 0 30px;
       font-style: italic;
-    }
-    .post-feature-image {
-      position: relative;
-      height: 366px;
-      margin: 0 -30px;
-      figure {
-        position: relative;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        z-index: 1;
-      }
     }
     img {
       max-width: 100%;

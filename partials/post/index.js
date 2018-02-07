@@ -9,7 +9,7 @@ $(function() {
   const $title = $post.find('.J-post-title')
   const $content = $post.find('.J-post-content')
   const $meta = $post.find('.J-post-meta')
-  const $featureImage = $post.find('.J-post-feature-image')
+  const $featureImage = $postWrap.find('.J-post-feature-image')
   const origin = location.origin
 
   highlight()

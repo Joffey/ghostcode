@@ -19,9 +19,9 @@ $(function() {
   })
 
   let currentTarget = 'blog-tree'
-  emitter.on('switch-sidebar', ({ target, toggle=false }) => {
+  emitter.on('switch-sidebar', ({ target }) => {
     const isSearch = target === 'search'
-    if (toggle && currentTarget === target) {
+    if (currentTarget === target) {
       $html.toggleClass('noscroll').toggleClass('archive-show')
       $sideBody.toggleClass('show')
     } else {

@@ -27,7 +27,6 @@ $(function() {
     const activeId = active.id
     const tabs = tabStore.getTabs()
     const currentTab = tabStore.currentTab
-
     const $active = $postTabs
       .html(
         tabs
@@ -46,12 +45,12 @@ $(function() {
     if (!currentTab) {
       tabStore.setCurrentTab({ ...active })
       history.replace(active.url, { ...active })
-    }
-
-    // not refetch current post
-    if (currentTab && currentTab.id !== activeId) {
+    } else {
       tabStore.setCurrentTab({ ...active })
-      history.push(active.url, { ...active })
+      // not refetch current post
+      if (currentTab.id !== activeId && !active.dontTouchHistory) {
+        history.push(active.url, { ...active })
+      }
     }
 
     scroll2view($active)
@@ -95,6 +94,7 @@ $(function() {
 
     // active element
     const ndActive = $active.get(0)
+    if (!ndActive) return
     const activeWidth = $active.outerWidth()
     const activeLeft = ndActive.offsetLeft
     const activeRight = activeLeft + activeWidth
@@ -116,6 +116,10 @@ $(function() {
         return $(post).data('id') === nextTab.id
       })
       .addClass('active')
+
+    if ($active.length === 0) {
+      emitter.emit('add-post-tab', { ...nextTab, dontTouchHistory: 1 })
+    }
 
     scroll2view($active)
   })

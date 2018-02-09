@@ -20,7 +20,6 @@ $(function() {
       title: $post.data('title'),
       slug: $post.data('slug'),
       url: $post.data('url'),
-      noHistory: true
     })
 
     emitter.emit('refresh-reading-time', {

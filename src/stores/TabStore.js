@@ -1,4 +1,4 @@
-import {lsPostTabKey, lsPostTabExpiration} from 'config'
+import { lsPostTabKey, lsPostTabExpiration } from 'config'
 const ls = localStorage
 
 export default class {
@@ -16,7 +16,7 @@ export default class {
   }
 
   setTabs(tabs) {
-    ls.setItem(lsPostTabKey, tabs.length ? tabs.map(tab => `${tab.id}:${tab.title}:${tab.url}:${tab.slug}`).join(',') + '___' + (+new Date()) : '')
+    ls.setItem(lsPostTabKey, tabs.length ? tabs.map(tab => `${tab.id}:${tab.title}:${tab.url}:${tab.slug}`).join(',') + '___' + +new Date() : '')
   }
 
   setCurrentTab(tab) {

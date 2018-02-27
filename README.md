@@ -12,12 +12,12 @@ Welcome to <b>STAR</b> :) (It's still under development)
 - [x] Home page
 - [x] Post page
 - [x] Author page
-- [ ] About page
+- [x] About page
 - [x] ~~Comment System: DISQUS~~(removed due to long loading time)
 - [x] ~~Prev / Next post~~(removed to simplify the theme, nav through sidebar is super easy)
 - [x] Change theme(Support official `vscode` theme)
 - [x] Search all posts
-- [ ] Responsive(v1, need to optimize)
+- [x] Responsive(need to optimize)
 
 ### P1
 - [x] Post Cache

@@ -10,25 +10,15 @@
     "pretheme:dev": "node tools/themeFormat.js",
     "theme:dev": "nodemon tools/theme.js -w src/styles/themes/common.scss -w tools/theme.js -w src/styles/themes/default.scss -w config.js --ext scss,js"
   },
-  "keywords": [
-    "ghost",
-    "theme"
-  ],
+  "config": {
+    "posts_per_page": 888
+  },
+  "keywords": ["ghost", "theme"],
   "author": {
     "name": "rangzf",
     "email": "frontendme@163.com"
   },
-  "browserslist": [
-    "ie >= 10",
-    "ie_mob >= 10",
-    "ff >= 30",
-    "chrome >= 34",
-    "safari >= 7",
-    "opera >= 23",
-    "ios >= 7",
-    "android >= 4.4",
-    "bb >= 10"
-  ],
+  "browserslist": ["ie >= 10", "ie_mob >= 10", "ff >= 30", "chrome >= 34", "safari >= 7", "opera >= 23", "ios >= 7", "android >= 4.4", "bb >= 10"],
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.2.4",

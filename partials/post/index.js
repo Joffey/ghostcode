@@ -10,6 +10,7 @@ $(function() {
   const $content = $post.find('.J-post-content')
   const $meta = $post.find('.J-post-meta')
   const $featureImage = $postWrap.find('.J-post-feature-image')
+  const $postLink = $postWrap.find('.J-post-link')
   const origin = location.origin
 
   highlight()
@@ -19,7 +20,7 @@ $(function() {
       id: $post.data('id'),
       title: $post.data('title'),
       slug: $post.data('slug'),
-      url: $post.data('url'),
+      url: $post.data('url')
     })
 
     emitter.emit('refresh-reading-time', {
@@ -29,7 +30,9 @@ $(function() {
 
   // refresh post data
   history.listen((location, action) => {
-    const postId = location.state.id
+    const nextTab = location.state
+    if (!nextTab) return
+    const postId = nextTab.id
 
     if (!postId) return
 
@@ -40,6 +43,7 @@ $(function() {
       $title.html(title)
       $content.html(html)
       $meta.html(`Posted by <a href="/author/${author.slug}/">${author.name}</a> on ${formatDate('$Y.$M.$d', published_at)}`)
+      $postLink.html(`<a href="${origin + url}">${origin + url}</a>`)
       $featureImage[feature_image ? 'removeClass' : 'addClass']('hidden')
         .find('figure')
         .css({

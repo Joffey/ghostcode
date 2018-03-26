@@ -110,6 +110,7 @@ $(function() {
 
   history.listen(location => {
     const nextTab = location.state
+    if (!nextTab) {return}
     const $active = $tabItems
       .removeClass('active')
       .filter((idx, post) => {

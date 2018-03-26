@@ -1,4 +1,4 @@
-import {lsPostsKey, lsPostsExpiration} from 'config'
+import { lsPostsKey, lsPostsExpiration } from 'config'
 import { tabStore } from '#/stores'
 import { formatDate } from '#/utils'
 const ls = localStorage

@@ -93,6 +93,7 @@ $(document).ready(function() {
 
   history.listen(location => {
     const nextTab = location.state
+    if (!nextTab) {return}
     $posts
       .removeClass('active')
       .filter((idx, post) => {

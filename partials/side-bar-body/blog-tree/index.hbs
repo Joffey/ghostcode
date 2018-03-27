@@ -15,7 +15,7 @@
     <div class="untaged-posts J-untaged-posts"></div>
   </div>
   <div id="J-posts-all-hidden" class="hidden">
-    {{#get "posts" include="tags" order="published_at desc" }}
+    {{#get "posts" include="tags" order="published_at desc" limit="all" }}
       {{#foreach posts}}
         <div class="J-post blog-tree-post" data-slug="{{slug}}">
           <a href="/{{slug}}/" class="J-go2post single-line blog-tree-post-title" data-id="{{id}}" title="{{title}}">

@@ -4,7 +4,7 @@
     <div class="title">blogs</div>
   </header>
   <div class="blog-tree-tags J-blog-tree-tags">
-    {{#get "tags" limit="all" order="id desc" }}
+    {{#get "tags" limit="all" order="name asc" }}
       {{#foreach tags}}
         <div class="blog-tree-tag">
           <h4 class="blog-tree-tagname single-line J-blog-tree-tagname">{{> "icons/arrow-right"}}{{name}}</h4>

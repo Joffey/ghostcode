@@ -60,6 +60,7 @@ $(function() {
 
       highlight()
       $postWrap.animate({ scrollTop: 0 }, 300)
+      emitter.emit('post-refreshed')
     })
   })
 
